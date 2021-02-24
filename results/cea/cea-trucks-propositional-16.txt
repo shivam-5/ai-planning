@@ -1,0 +1,322 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 1799.97s
+INFO     translator memory limit: 8192 MB
+INFO     translator command line string: /usr/bin/python3 /src/fd/builds/release/bin/translate/translate.py pddl-instances/ipc-2006/domains/trucks-propositional/domain.pddl pddl-instances/ipc-2006/domains/trucks-propositional/instances/instance-16.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.002s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
+Preparing model... [0.010s CPU, 0.002s wall-clock]
+Generated 38 rules.
+Computing model... [0.060s CPU, 0.069s wall-clock]
+9371 relevant atoms
+790 auxiliary atoms
+10161 final queue length
+24809 total queue pushes
+Completing instantiation... [0.190s CPU, 0.194s wall-clock]
+Instantiating: [0.270s CPU, 0.269s wall-clock]
+Computing fact groups...
+Finding invariants...
+19 initial candidates
+Finding invariants: [0.000s CPU, 0.005s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.010s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+1028 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.010s CPU, 0.003s wall-clock]
+Computing fact groups: [0.020s CPU, 0.017s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.001s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.012s wall-clock]
+Translating task: [0.280s CPU, 0.279s wall-clock]
+7740 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+5 propositions removed
+Detecting unreachable propositions: [0.150s CPU, 0.163s wall-clock]
+Reordering and filtering variables...
+85 of 1033 variables necessary.
+0 of 9 mutex groups necessary.
+7980 of 7980 operators necessary.
+3 of 3 axiom rules necessary.
+Reordering and filtering variables: [0.040s CPU, 0.041s wall-clock]
+Translator variables: 85
+Translator derived variables: 3
+Translator facts: 228
+Translator goal facts: 12
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 7980
+Translator axioms: 3
+Translator task size: 34709
+Translator peak memory: 71248 KB
+Writing output... [0.050s CPU, 0.050s wall-clock]
+Done! [0.820s CPU, 0.836s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: 1799.09s
+INFO     search memory limit: 8192 MB
+INFO     search command line string: /src/fd/builds/release/bin/downward --search 'astar(cea())' --internal-plan-file plan.txt < output.sas
+[t=0.000112892s, 55864 KB] reading input...
+[t=0.0163325s, 57672 KB] done reading input!
+[t=0.0171379s, 57936 KB] Initializing context-enhanced additive heuristic...
+[t=0.0200595s, 58996 KB] Building successor generator...done!
+[t=0.0213213s, 59500 KB] peak memory difference for successor generator creation: 504 KB
+[t=0.0213603s, 59500 KB] time for successor generation creation: 0.00107645s
+[t=0.0214052s, 59500 KB] Variables: 85
+[t=0.0214405s, 59500 KB] FactPairs: 228
+[t=0.0214669s, 59500 KB] Bytes per state: 16
+[t=0.0215358s, 59500 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.0217234s, 59500 KB] New best heuristic value for cea: 66
+[t=0.0217696s, 59500 KB] g=0, 1 evaluated, 0 expanded
+[t=0.021796s, 59500 KB] f = 66, 1 evaluated, 0 expanded
+[t=0.0218311s, 59500 KB] Initial heuristic value for cea: 66
+[t=0.0218766s, 59500 KB] pruning method: none
+[t=0.0220065s, 59500 KB] New best heuristic value for cea: 57
+[t=0.0220515s, 59500 KB] g=1, 2 evaluated, 1 expanded
+[t=0.0221966s, 59500 KB] New best heuristic value for cea: 56
+[t=0.022242s, 59500 KB] g=1, 4 evaluated, 1 expanded
+[t=0.0223314s, 59500 KB] New best heuristic value for cea: 52
+[t=0.0223783s, 59500 KB] g=1, 5 evaluated, 1 expanded
+[t=0.0239825s, 59500 KB] New best heuristic value for cea: 51
+[t=0.0240289s, 59500 KB] g=2, 38 evaluated, 2 expanded
+[t=0.245383s, 59500 KB] New best heuristic value for cea: 49
+[t=0.245479s, 59500 KB] g=5, 4495 evaluated, 196 expanded
+[t=0.24591s, 59500 KB] New best heuristic value for cea: 48
+[t=0.245957s, 59500 KB] g=6, 4503 evaluated, 197 expanded
+[t=0.247517s, 59500 KB] New best heuristic value for cea: 47
+[t=0.247566s, 59500 KB] g=7, 4533 evaluated, 198 expanded
+[t=0.251055s, 59500 KB] New best heuristic value for cea: 45
+[t=0.251117s, 59500 KB] g=8, 4605 evaluated, 201 expanded
+[t=0.252998s, 59500 KB] New best heuristic value for cea: 44
+[t=0.253051s, 59500 KB] g=9, 4642 evaluated, 202 expanded
+[t=0.255153s, 59500 KB] New best heuristic value for cea: 43
+[t=0.255212s, 59500 KB] g=10, 4691 evaluated, 203 expanded
+[t=0.441782s, 59648 KB] New best heuristic value for cea: 42
+[t=0.441881s, 59648 KB] g=10, 8803 evaluated, 421 expanded
+[t=1.99707s, 61252 KB] New best heuristic value for cea: 41
+[t=1.99716s, 61252 KB] g=13, 43458 evaluated, 2177 expanded, 32 reopened
+[t=1.99771s, 61252 KB] New best heuristic value for cea: 40
+[t=1.99776s, 61252 KB] g=14, 43469 evaluated, 2178 expanded, 32 reopened
+[t=1.99873s, 61252 KB] New best heuristic value for cea: 39
+[t=1.99878s, 61252 KB] g=15, 43489 evaluated, 2179 expanded, 32 reopened
+[t=2.00252s, 61384 KB] New best heuristic value for cea: 38
+[t=2.00263s, 61384 KB] g=15, 43564 evaluated, 2183 expanded, 32 reopened
+[t=2.00412s, 61384 KB] New best heuristic value for cea: 37
+[t=2.00421s, 61384 KB] g=16, 43592 evaluated, 2184 expanded, 32 reopened
+[t=2.00558s, 61384 KB] New best heuristic value for cea: 36
+[t=2.00563s, 61384 KB] g=17, 43622 evaluated, 2185 expanded, 32 reopened
+[t=2.00711s, 61384 KB] New best heuristic value for cea: 35
+[t=2.00717s, 61384 KB] g=18, 43656 evaluated, 2186 expanded, 32 reopened
+[t=2.00803s, 61384 KB] New best heuristic value for cea: 34
+[t=2.00808s, 61384 KB] g=19, 43675 evaluated, 2187 expanded, 32 reopened
+[t=2.18284s, 61516 KB] New best heuristic value for cea: 33
+[t=2.18296s, 61516 KB] g=21, 47791 evaluated, 2435 expanded, 32 reopened
+[t=2.1831s, 61516 KB] New best heuristic value for cea: 32
+[t=2.18314s, 61516 KB] g=21, 47794 evaluated, 2435 expanded, 32 reopened
+[t=2.18374s, 61516 KB] New best heuristic value for cea: 31
+[t=2.18379s, 61516 KB] g=22, 47808 evaluated, 2436 expanded, 32 reopened
+[t=2.18519s, 61516 KB] New best heuristic value for cea: 30
+[t=2.18524s, 61516 KB] g=23, 47843 evaluated, 2437 expanded, 32 reopened
+[t=2.20615s, 61516 KB] New best heuristic value for cea: 29
+[t=2.2062s, 61516 KB] g=25, 48354 evaluated, 2472 expanded, 32 reopened
+[t=2.33816s, 61652 KB] New best heuristic value for cea: 27
+[t=2.33825s, 61652 KB] g=26, 51566 evaluated, 2760 expanded, 32 reopened
+[t=2.33887s, 61652 KB] New best heuristic value for cea: 26
+[t=2.33891s, 61652 KB] g=27, 51581 evaluated, 2761 expanded, 32 reopened
+[t=2.3402s, 61652 KB] New best heuristic value for cea: 25
+[t=2.34025s, 61652 KB] g=28, 51614 evaluated, 2762 expanded, 32 reopened
+[t=2.84327s, 62944 KB] New best heuristic value for cea: 24
+[t=2.84336s, 62944 KB] g=30, 63870 evaluated, 3710 expanded, 32 reopened
+[t=2.84347s, 62944 KB] New best heuristic value for cea: 23
+[t=2.8435s, 62944 KB] g=30, 63872 evaluated, 3710 expanded, 32 reopened
+[t=2.8442s, 62944 KB] New best heuristic value for cea: 22
+[t=2.84425s, 62944 KB] g=31, 63890 evaluated, 3711 expanded, 32 reopened
+[t=2.84522s, 62944 KB] New best heuristic value for cea: 21
+[t=2.84527s, 62944 KB] g=32, 63916 evaluated, 3712 expanded, 32 reopened
+[t=3.00687s, 62944 KB] New best heuristic value for cea: 20
+[t=3.00695s, 62944 KB] g=33, 68112 evaluated, 4094 expanded, 32 reopened
+[t=3.00739s, 62944 KB] New best heuristic value for cea: 19
+[t=3.00742s, 62944 KB] g=34, 68123 evaluated, 4095 expanded, 32 reopened
+[t=3.01167s, 62944 KB] New best heuristic value for cea: 18
+[t=3.01172s, 62944 KB] g=34, 68222 evaluated, 4108 expanded, 32 reopened
+[t=3.01215s, 62944 KB] New best heuristic value for cea: 17
+[t=3.01219s, 62944 KB] g=35, 68232 evaluated, 4109 expanded, 32 reopened
+[t=3.01822s, 62944 KB] New best heuristic value for cea: 16
+[t=3.01827s, 62944 KB] g=36, 68386 evaluated, 4129 expanded, 32 reopened
+[t=3.01895s, 62944 KB] New best heuristic value for cea: 15
+[t=3.01899s, 62944 KB] g=37, 68401 evaluated, 4130 expanded, 32 reopened
+[t=3.19005s, 63092 KB] New best heuristic value for cea: 14
+[t=3.19014s, 63092 KB] g=39, 72816 evaluated, 4652 expanded, 32 reopened
+[t=3.1906s, 63092 KB] New best heuristic value for cea: 13
+[t=3.19065s, 63092 KB] g=40, 72828 evaluated, 4653 expanded, 32 reopened
+[t=3.19132s, 63092 KB] New best heuristic value for cea: 12
+[t=3.19136s, 63092 KB] g=41, 72846 evaluated, 4654 expanded, 32 reopened
+[t=3.20167s, 63092 KB] New best heuristic value for cea: 11
+[t=3.20173s, 63092 KB] g=42, 73150 evaluated, 4690 expanded, 32 reopened
+[t=3.20189s, 63092 KB] New best heuristic value for cea: 10
+[t=3.20193s, 63092 KB] g=43, 73153 evaluated, 4691 expanded, 32 reopened
+[t=3.20242s, 63092 KB] New best heuristic value for cea: 9
+[t=3.20247s, 63092 KB] g=44, 73167 evaluated, 4692 expanded, 32 reopened
+[t=3.20329s, 63092 KB] New best heuristic value for cea: 8
+[t=3.20333s, 63092 KB] g=45, 73192 evaluated, 4697 expanded, 32 reopened
+[t=3.22493s, 63092 KB] New best heuristic value for cea: 7
+[t=3.22498s, 63092 KB] g=45, 73864 evaluated, 4812 expanded, 32 reopened
+[t=3.22528s, 63092 KB] New best heuristic value for cea: 6
+[t=3.22533s, 63092 KB] g=46, 73872 evaluated, 4813 expanded, 32 reopened
+[t=3.22564s, 63092 KB] New best heuristic value for cea: 5
+[t=3.22569s, 63092 KB] g=47, 73881 evaluated, 4814 expanded, 32 reopened
+[t=3.76022s, 63760 KB] New best heuristic value for cea: 4
+[t=3.76031s, 63760 KB] g=47, 88891 evaluated, 7433 expanded, 66 reopened
+[t=3.76084s, 63760 KB] New best heuristic value for cea: 3
+[t=3.7609s, 63760 KB] g=48, 88907 evaluated, 7436 expanded, 66 reopened
+[t=3.76108s, 63760 KB] New best heuristic value for cea: 2
+[t=3.76112s, 63760 KB] g=49, 88911 evaluated, 7437 expanded, 66 reopened
+[t=3.76127s, 63760 KB] New best heuristic value for cea: 1
+[t=3.76132s, 63760 KB] g=50, 88915 evaluated, 7438 expanded, 66 reopened
+[t=3.76145s, 63760 KB] New best heuristic value for cea: 0
+[t=3.76149s, 63760 KB] g=51, 88919 evaluated, 7439 expanded, 66 reopened
+[t=3.76154s, 63760 KB] Solution found!
+[t=3.76159s, 63760 KB] Actual search time: 3.73969s
+drive truck1 l4 l5 t0 t1 (1)
+load package1 truck1 a3 l5 (1)
+load package3 truck1 a2 l5 (1)
+drive truck1 l5 l4 t1 t2 (1)
+unload package3 truck1 a2 l4 (1)
+deliver package3 l4 t2 t10 (1)
+unload package1 truck1 a3 l4 (1)
+drive truck1 l4 l5 t2 t3 (1)
+deliver package1 l4 t3 t5 (1)
+load package2 truck1 a3 l5 (1)
+load package4 truck1 a2 l5 (1)
+drive truck1 l5 l3 t3 t4 (1)
+unload package4 truck1 a2 l3 (1)
+unload package2 truck1 a3 l3 (1)
+drive truck1 l3 l4 t4 t5 (1)
+deliver package2 l3 t5 t5 (1)
+deliver package4 l3 t5 t10 (1)
+load package11 truck1 a2 l4 (1)
+drive truck1 l4 l1 t5 t6 (1)
+unload package11 truck1 a2 l1 (1)
+drive truck1 l1 l5 t6 t7 (1)
+deliver package11 l1 t7 t10 (1)
+load package6 truck1 a3 l5 (1)
+load package8 truck1 a2 l5 (1)
+drive truck1 l5 l2 t7 t8 (1)
+unload package8 truck1 a2 l2 (1)
+unload package6 truck1 a3 l2 (1)
+drive truck1 l2 l5 t8 t9 (1)
+deliver package6 l2 t9 t10 (1)
+deliver package8 l2 t9 t10 (1)
+load package5 truck1 a3 l5 (1)
+load package7 truck1 a2 l5 (1)
+drive truck1 l5 l3 t9 t10 (1)
+unload package7 truck1 a2 l3 (1)
+unload package5 truck1 a3 l3 (1)
+deliver package5 l3 t10 t10 (1)
+drive truck1 l3 l4 t10 t11 (1)
+deliver package7 l3 t11 t11 (1)
+load package10 truck1 a3 l4 (1)
+load package12 truck1 a2 l4 (1)
+drive truck1 l4 l1 t11 t12 (1)
+unload package12 truck1 a2 l1 (1)
+deliver package12 l1 t12 t12 (1)
+drive truck1 l1 l2 t12 t13 (1)
+unload package10 truck1 a3 l2 (1)
+drive truck1 l2 l4 t13 t14 (1)
+deliver package10 l2 t14 t14 (1)
+load package9 truck1 a2 l4 (1)
+drive truck1 l4 l1 t14 t15 (1)
+unload package9 truck1 a2 l1 (1)
+deliver package9 l1 t15 t15 (1)
+[t=3.76164s, 63760 KB] Plan length: 51 step(s).
+[t=3.76164s, 63760 KB] Plan cost: 51
+[t=3.76164s, 63760 KB] Expanded 7440 state(s).
+[t=3.76164s, 63760 KB] Reopened 66 state(s).
+[t=3.76164s, 63760 KB] Evaluated 88919 state(s).
+[t=3.76164s, 63760 KB] Evaluations: 88919
+[t=3.76164s, 63760 KB] Generated 454891 state(s).
+[t=3.76164s, 63760 KB] Dead ends: 43101 state(s).
+[t=3.76164s, 63760 KB] Expanded until last jump: 0 state(s).
+[t=3.76164s, 63760 KB] Reopened until last jump: 0 state(s).
+[t=3.76164s, 63760 KB] Evaluated until last jump: 1 state(s).
+[t=3.76164s, 63760 KB] Generated until last jump: 0 state(s).
+[t=3.76164s, 63760 KB] Number of registered states: 88919
+[t=3.76164s, 63760 KB] Int hash set load factor: 88919/131072 = 0.678398
+[t=3.76164s, 63760 KB] Int hash set resizes: 17
+[t=3.76164s, 63760 KB] Search time: 3.7401s
+[t=3.76164s, 63760 KB] Total time: 3.76164s
+Solution found.
+Peak memory: 63760 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+-----------PLAN-----------
+
+(drive truck1 l4 l5 t0 t1)
+(load package1 truck1 a3 l5)
+(load package3 truck1 a2 l5)
+(drive truck1 l5 l4 t1 t2)
+(unload package3 truck1 a2 l4)
+(deliver package3 l4 t2 t10)
+(unload package1 truck1 a3 l4)
+(drive truck1 l4 l5 t2 t3)
+(deliver package1 l4 t3 t5)
+(load package2 truck1 a3 l5)
+(load package4 truck1 a2 l5)
+(drive truck1 l5 l3 t3 t4)
+(unload package4 truck1 a2 l3)
+(unload package2 truck1 a3 l3)
+(drive truck1 l3 l4 t4 t5)
+(deliver package2 l3 t5 t5)
+(deliver package4 l3 t5 t10)
+(load package11 truck1 a2 l4)
+(drive truck1 l4 l1 t5 t6)
+(unload package11 truck1 a2 l1)
+(drive truck1 l1 l5 t6 t7)
+(deliver package11 l1 t7 t10)
+(load package6 truck1 a3 l5)
+(load package8 truck1 a2 l5)
+(drive truck1 l5 l2 t7 t8)
+(unload package8 truck1 a2 l2)
+(unload package6 truck1 a3 l2)
+(drive truck1 l2 l5 t8 t9)
+(deliver package6 l2 t9 t10)
+(deliver package8 l2 t9 t10)
+(load package5 truck1 a3 l5)
+(load package7 truck1 a2 l5)
+(drive truck1 l5 l3 t9 t10)
+(unload package7 truck1 a2 l3)
+(unload package5 truck1 a3 l3)
+(deliver package5 l3 t10 t10)
+(drive truck1 l3 l4 t10 t11)
+(deliver package7 l3 t11 t11)
+(load package10 truck1 a3 l4)
+(load package12 truck1 a2 l4)
+(drive truck1 l4 l1 t11 t12)
+(unload package12 truck1 a2 l1)
+(deliver package12 l1 t12 t12)
+(drive truck1 l1 l2 t12 t13)
+(unload package10 truck1 a3 l2)
+(drive truck1 l2 l4 t13 t14)
+(deliver package10 l2 t14 t14)
+(load package9 truck1 a2 l4)
+(drive truck1 l4 l1 t14 t15)
+(unload package9 truck1 a2 l1)
+(deliver package9 l1 t15 t15)
+; cost = 51 (unit cost)

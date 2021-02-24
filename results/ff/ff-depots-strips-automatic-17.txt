@@ -1,0 +1,217 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 1799.96s
+INFO     translator memory limit: 8192 MB
+INFO     translator command line string: /usr/bin/python3 /src/fd/builds/release/bin/translate/translate.py pddl-instances/ipc-2002/domains/depots-strips-automatic/domain.pddl pddl-instances/ipc-2002/domains/depots-strips-automatic/instances/instance-17.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.002s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.004s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 43 rules.
+Computing model... [0.040s CPU, 0.041s wall-clock]
+3667 relevant atoms
+1884 auxiliary atoms
+5551 final queue length
+12993 total queue pushes
+Completing instantiation... [0.120s CPU, 0.120s wall-clock]
+Instantiating: [0.170s CPU, 0.168s wall-clock]
+Computing fact groups...
+Finding invariants...
+16 initial candidates
+Finding invariants: [0.010s CPU, 0.006s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.000s CPU, 0.006s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+42 uncovered facts
+Choosing groups: [0.010s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.020s CPU, 0.017s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.007s wall-clock]
+Translating task: [0.160s CPU, 0.164s wall-clock]
+3930 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+56 propositions removed
+Detecting unreachable propositions: [0.070s CPU, 0.071s wall-clock]
+Reordering and filtering variables...
+50 of 50 variables necessary.
+36 of 50 mutex groups necessary.
+2938 of 2938 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.030s CPU, 0.029s wall-clock]
+Translator variables: 50
+Translator derived variables: 0
+Translator facts: 408
+Translator goal facts: 7
+Translator mutex groups: 36
+Translator total mutex groups size: 556
+Translator operators: 2938
+Translator axioms: 0
+Translator task size: 26125
+Translator peak memory: 56328 KB
+Writing output... [0.030s CPU, 0.033s wall-clock]
+Done! [0.490s CPU, 0.492s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: 1799.42s
+INFO     search memory limit: 8192 MB
+INFO     search command line string: /src/fd/builds/release/bin/downward --search 'astar(ff())' --internal-plan-file plan.txt < output.sas
+[t=0.000153009s, 55864 KB] reading input...
+[t=0.0112085s, 57196 KB] done reading input!
+[t=0.0129532s, 58416 KB] Simplifying 12578 unary operators... done! [12578 unary operators]
+[t=0.0224128s, 59356 KB] time to simplify: 0.00952453s
+[t=0.0228589s, 59356 KB] Initializing additive heuristic...
+[t=0.0229077s, 59356 KB] Initializing FF heuristic...
+[t=0.022989s, 59356 KB] Building successor generator...done!
+[t=0.0239936s, 59356 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.024031s, 59356 KB] time for successor generation creation: 0.000896832s
+[t=0.024092s, 59356 KB] Variables: 50
+[t=0.0241189s, 59356 KB] FactPairs: 408
+[t=0.0241519s, 59356 KB] Bytes per state: 16
+[t=0.024293s, 59356 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.0246071s, 59356 KB] New best heuristic value for ff: 29
+[t=0.0246537s, 59356 KB] g=0, 1 evaluated, 0 expanded
+[t=0.0246998s, 59356 KB] f = 29, 1 evaluated, 0 expanded
+[t=0.0247514s, 59356 KB] Initial heuristic value for ff: 29
+[t=0.0247982s, 59356 KB] pruning method: none
+[t=0.0250376s, 59356 KB] New best heuristic value for ff: 28
+[t=0.0251989s, 59356 KB] g=1, 2 evaluated, 1 expanded
+[t=0.027756s, 59356 KB] New best heuristic value for ff: 26
+[t=0.0278088s, 59356 KB] g=1, 15 evaluated, 1 expanded
+[t=0.0296249s, 59356 KB] New best heuristic value for ff: 24
+[t=0.0296822s, 59356 KB] g=1, 25 evaluated, 1 expanded
+[t=0.0338443s, 59356 KB] New best heuristic value for ff: 23
+[t=0.0338946s, 59356 KB] g=2, 49 evaluated, 2 expanded
+[t=0.0358884s, 59356 KB] New best heuristic value for ff: 22
+[t=0.0359366s, 59356 KB] g=3, 61 evaluated, 3 expanded
+[t=0.0399621s, 59356 KB] New best heuristic value for ff: 21
+[t=0.0400136s, 59356 KB] g=4, 85 evaluated, 4 expanded
+[t=0.0453044s, 59356 KB] New best heuristic value for ff: 20
+[t=0.0453941s, 59356 KB] g=5, 115 evaluated, 5 expanded
+[t=0.0492463s, 59356 KB] New best heuristic value for ff: 19
+[t=0.0492959s, 59356 KB] g=6, 138 evaluated, 6 expanded
+[t=0.0548508s, 59356 KB] New best heuristic value for ff: 18
+[t=0.0549128s, 59356 KB] g=7, 171 evaluated, 7 expanded
+[t=0.0949634s, 59356 KB] New best heuristic value for ff: 17
+[t=0.0950634s, 59356 KB] g=9, 409 evaluated, 18 expanded
+[t=0.13851s, 59356 KB] New best heuristic value for ff: 16
+[t=0.138618s, 59356 KB] g=9, 661 evaluated, 30 expanded
+[t=0.141685s, 59356 KB] New best heuristic value for ff: 15
+[t=0.141743s, 59356 KB] g=10, 679 evaluated, 31 expanded
+[t=0.145987s, 59356 KB] New best heuristic value for ff: 14
+[t=0.146055s, 59356 KB] g=11, 704 evaluated, 32 expanded
+[t=0.151871s, 59356 KB] New best heuristic value for ff: 13
+[t=0.151975s, 59356 KB] g=12, 737 evaluated, 33 expanded
+[t=0.157409s, 59356 KB] New best heuristic value for ff: 12
+[t=0.157503s, 59356 KB] g=13, 768 evaluated, 34 expanded
+[t=0.162601s, 59356 KB] New best heuristic value for ff: 11
+[t=0.162717s, 59356 KB] g=14, 798 evaluated, 35 expanded
+[t=0.439006s, 59356 KB] New best heuristic value for ff: 10
+[t=0.439098s, 59356 KB] g=16, 2455 evaluated, 106 expanded
+[t=0.885695s, 59356 KB] New best heuristic value for ff: 9
+[t=0.885789s, 59356 KB] g=17, 5066 evaluated, 267 expanded
+[t=0.986561s, 59356 KB] New best heuristic value for ff: 8
+[t=0.98666s, 59356 KB] g=16, 5641 evaluated, 292 expanded
+[t=0.99209s, 59356 KB] New best heuristic value for ff: 7
+[t=0.99214s, 59356 KB] g=17, 5675 evaluated, 293 expanded
+[t=0.996662s, 59356 KB] New best heuristic value for ff: 6
+[t=0.99671s, 59356 KB] g=18, 5707 evaluated, 294 expanded
+[t=1.00172s, 59356 KB] New best heuristic value for ff: 5
+[t=1.00177s, 59356 KB] g=19, 5744 evaluated, 295 expanded
+[t=1.01032s, 59356 KB] New best heuristic value for ff: 3
+[t=1.01037s, 59356 KB] g=20, 5811 evaluated, 297 expanded
+[t=1.01359s, 59356 KB] New best heuristic value for ff: 2
+[t=1.01368s, 59356 KB] g=21, 5838 evaluated, 298 expanded
+[t=1.01802s, 59356 KB] New best heuristic value for ff: 1
+[t=1.01812s, 59356 KB] g=22, 5877 evaluated, 299 expanded
+[t=1.02033s, 59356 KB] New best heuristic value for ff: 0
+[t=1.02038s, 59356 KB] g=23, 5902 evaluated, 300 expanded
+[t=1.0207s, 59356 KB] Solution found!
+[t=1.02075s, 59356 KB] Actual search time: 0.995928s
+lift hoist3 crate8 crate6 distributor1 (1)
+lift hoist7 crate6 pallet7 distributor1 (1)
+load hoist7 crate6 truck1 distributor1 (1)
+drive truck1 distributor1 depot1 (1)
+lift hoist7 crate1 pallet5 distributor1 (1)
+drop hoist7 crate1 pallet7 distributor1 (1)
+lift hoist7 crate7 crate5 distributor1 (1)
+lift hoist1 crate4 pallet1 depot1 (1)
+load hoist1 crate4 truck2 depot1 (1)
+drive truck2 depot1 distributor1 (1)
+load hoist7 crate7 truck2 distributor1 (1)
+unload hoist1 crate6 truck1 depot1 (1)
+drop hoist1 crate6 pallet1 depot1 (1)
+load hoist3 crate8 truck2 distributor1 (1)
+drive truck2 distributor1 depot0 (1)
+unload hoist0 crate8 truck2 depot0 (1)
+unload hoist4 crate4 truck2 depot0 (1)
+unload hoist5 crate7 truck2 depot0 (1)
+lift hoist6 crate3 pallet6 depot0 (1)
+drop hoist0 crate8 pallet6 depot0 (1)
+drop hoist4 crate4 pallet0 depot0 (1)
+drop hoist6 crate3 crate8 depot0 (1)
+drop hoist5 crate7 crate3 depot0 (1)
+[t=1.0208s, 59356 KB] Plan length: 23 step(s).
+[t=1.0208s, 59356 KB] Plan cost: 23
+[t=1.0208s, 59356 KB] Expanded 301 state(s).
+[t=1.0208s, 59356 KB] Reopened 0 state(s).
+[t=1.0208s, 59356 KB] Evaluated 5905 state(s).
+[t=1.0208s, 59356 KB] Evaluations: 5905
+[t=1.0208s, 59356 KB] Generated 8667 state(s).
+[t=1.0208s, 59356 KB] Dead ends: 0 state(s).
+[t=1.0208s, 59356 KB] Expanded until last jump: 0 state(s).
+[t=1.0208s, 59356 KB] Reopened until last jump: 0 state(s).
+[t=1.0208s, 59356 KB] Evaluated until last jump: 1 state(s).
+[t=1.0208s, 59356 KB] Generated until last jump: 0 state(s).
+[t=1.0208s, 59356 KB] Number of registered states: 5905
+[t=1.0208s, 59356 KB] Int hash set load factor: 5905/8192 = 0.720825
+[t=1.0208s, 59356 KB] Int hash set resizes: 13
+[t=1.0208s, 59356 KB] Search time: 0.996506s
+[t=1.0208s, 59356 KB] Total time: 1.0208s
+Solution found.
+Peak memory: 59356 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+-----------PLAN-----------
+
+(lift hoist3 crate8 crate6 distributor1)
+(lift hoist7 crate6 pallet7 distributor1)
+(load hoist7 crate6 truck1 distributor1)
+(drive truck1 distributor1 depot1)
+(lift hoist7 crate1 pallet5 distributor1)
+(drop hoist7 crate1 pallet7 distributor1)
+(lift hoist7 crate7 crate5 distributor1)
+(lift hoist1 crate4 pallet1 depot1)
+(load hoist1 crate4 truck2 depot1)
+(drive truck2 depot1 distributor1)
+(load hoist7 crate7 truck2 distributor1)
+(unload hoist1 crate6 truck1 depot1)
+(drop hoist1 crate6 pallet1 depot1)
+(load hoist3 crate8 truck2 distributor1)
+(drive truck2 distributor1 depot0)
+(unload hoist0 crate8 truck2 depot0)
+(unload hoist4 crate4 truck2 depot0)
+(unload hoist5 crate7 truck2 depot0)
+(lift hoist6 crate3 pallet6 depot0)
+(drop hoist0 crate8 pallet6 depot0)
+(drop hoist4 crate4 pallet0 depot0)
+(drop hoist6 crate3 crate8 depot0)
+(drop hoist5 crate7 crate3 depot0)
+; cost = 23 (unit cost)

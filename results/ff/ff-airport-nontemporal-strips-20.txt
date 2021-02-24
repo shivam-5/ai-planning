@@ -1,0 +1,570 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 1799.98s
+INFO     translator memory limit: 8192 MB
+INFO     translator command line string: /usr/bin/python3 /src/fd/builds/release/bin/translate/translate.py pddl-instances/ipc-2004/domains/airport-nontemporal-strips/domains/domain-20.pddl pddl-instances/ipc-2004/domains/airport-nontemporal-strips/instances/instance-20.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.030s CPU, 0.035s wall-clock]
+Normalizing task... [0.010s CPU, 0.003s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.004s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.020s CPU, 0.022s wall-clock]
+Preparing model... [0.020s CPU, 0.016s wall-clock]
+Generated 1395 rules.
+Computing model... [0.050s CPU, 0.051s wall-clock]
+1983 relevant atoms
+4397 auxiliary atoms
+6380 final queue length
+8912 total queue pushes
+Completing instantiation... [0.050s CPU, 0.046s wall-clock]
+Instantiating: [0.140s CPU, 0.141s wall-clock]
+Computing fact groups...
+Finding invariants...
+26 initial candidates
+Finding invariants: [0.050s CPU, 0.054s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.010s CPU, 0.005s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+683 uncovered facts
+Choosing groups: [0.000s CPU, 0.002s wall-clock]
+Building translation key... [0.000s CPU, 0.002s wall-clock]
+Computing fact groups: [0.070s CPU, 0.072s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.001s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.003s wall-clock]
+Translating task: [0.060s CPU, 0.061s wall-clock]
+2347 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+59 propositions removed
+Detecting unreachable propositions: [0.040s CPU, 0.040s wall-clock]
+Reordering and filtering variables...
+341 of 683 variables necessary.
+47 of 79 mutex groups necessary.
+777 of 777 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.090s CPU, 0.083s wall-clock]
+Translator variables: 341
+Translator derived variables: 0
+Translator facts: 994
+Translator goal facts: 7
+Translator mutex groups: 47
+Translator total mutex groups size: 345
+Translator operators: 777
+Translator axioms: 0
+Translator task size: 11495
+Translator peak memory: 51872 KB
+Writing output... [0.010s CPU, 0.013s wall-clock]
+Done! [0.450s CPU, 0.455s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: 1799.48s
+INFO     search memory limit: 8192 MB
+INFO     search command line string: /src/fd/builds/release/bin/downward --search 'astar(ff())' --internal-plan-file plan.txt < output.sas
+[t=2.7071e-05s, 55864 KB] reading input...
+[t=0.00520708s, 56528 KB] done reading input!
+[t=0.00634908s, 57260 KB] Simplifying 3181 unary operators... done! [3161 unary operators]
+[t=0.00742803s, 57480 KB] time to simplify: 0.00118008s
+[t=0.0078542s, 57628 KB] Initializing additive heuristic...
+[t=0.00791516s, 57628 KB] Initializing FF heuristic...
+[t=0.00800364s, 57628 KB] Building successor generator...done!
+[t=0.00853037s, 57628 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.00856789s, 57628 KB] time for successor generation creation: 0.000401523s
+[t=0.00862176s, 57628 KB] Variables: 341
+[t=0.00867285s, 57628 KB] FactPairs: 994
+[t=0.00872084s, 57628 KB] Bytes per state: 52
+[t=0.00881179s, 57628 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.00907558s, 57628 KB] New best heuristic value for ff: 115
+[t=0.00912838s, 57628 KB] g=0, 1 evaluated, 0 expanded
+[t=0.00917879s, 57628 KB] f = 115, 1 evaluated, 0 expanded
+[t=0.00923071s, 57628 KB] Initial heuristic value for ff: 115
+[t=0.00927968s, 57628 KB] pruning method: none
+[t=0.00948291s, 57628 KB] New best heuristic value for ff: 114
+[t=0.0095333s, 57628 KB] g=1, 2 evaluated, 1 expanded
+[t=0.0113391s, 57628 KB] New best heuristic value for ff: 113
+[t=0.011392s, 57628 KB] g=2, 16 evaluated, 2 expanded
+[t=0.0131832s, 57628 KB] New best heuristic value for ff: 112
+[t=0.0132358s, 57628 KB] g=3, 30 evaluated, 3 expanded
+[t=0.0150447s, 57628 KB] New best heuristic value for ff: 111
+[t=0.0150992s, 57628 KB] g=4, 44 evaluated, 4 expanded
+[t=0.0169288s, 57628 KB] New best heuristic value for ff: 110
+[t=0.0169808s, 57628 KB] g=5, 58 evaluated, 5 expanded
+[t=0.0187835s, 57628 KB] New best heuristic value for ff: 109
+[t=0.0188352s, 57628 KB] g=6, 72 evaluated, 6 expanded
+[t=0.020628s, 57628 KB] New best heuristic value for ff: 108
+[t=0.02068s, 57628 KB] g=7, 86 evaluated, 7 expanded
+[t=0.0224787s, 57628 KB] New best heuristic value for ff: 107
+[t=0.0225387s, 57628 KB] g=8, 100 evaluated, 8 expanded
+[t=0.0243258s, 57628 KB] New best heuristic value for ff: 106
+[t=0.0243791s, 57628 KB] g=9, 114 evaluated, 9 expanded
+[t=0.0260383s, 57628 KB] New best heuristic value for ff: 105
+[t=0.0260899s, 57628 KB] g=10, 127 evaluated, 10 expanded
+[t=0.0277579s, 57628 KB] New best heuristic value for ff: 104
+[t=0.0278093s, 57628 KB] g=11, 140 evaluated, 11 expanded
+[t=0.0295738s, 57628 KB] New best heuristic value for ff: 103
+[t=0.0296268s, 57628 KB] g=12, 154 evaluated, 12 expanded
+[t=0.0315031s, 57628 KB] New best heuristic value for ff: 102
+[t=0.0315559s, 57628 KB] g=13, 169 evaluated, 13 expanded
+[t=0.0332876s, 57628 KB] New best heuristic value for ff: 101
+[t=0.0333391s, 57628 KB] g=14, 183 evaluated, 14 expanded
+[t=0.0351109s, 57628 KB] New best heuristic value for ff: 100
+[t=0.0351635s, 57628 KB] g=15, 197 evaluated, 15 expanded
+[t=0.0366059s, 57628 KB] New best heuristic value for ff: 99
+[t=0.0366587s, 57628 KB] g=16, 208 evaluated, 16 expanded
+[t=0.765425s, 57936 KB] f = 116, 6224 evaluated, 592 expanded
+[t=0.768346s, 57936 KB] New best heuristic value for ff: 98
+[t=0.768399s, 57936 KB] g=18, 6247 evaluated, 595 expanded
+[t=0.769394s, 57936 KB] New best heuristic value for ff: 97
+[t=0.769446s, 57936 KB] g=18, 6255 evaluated, 595 expanded
+[t=0.784431s, 57936 KB] New best heuristic value for ff: 96
+[t=0.784517s, 57936 KB] g=20, 6380 evaluated, 609 expanded
+[t=0.951327s, 58068 KB] New best heuristic value for ff: 94
+[t=0.951448s, 58068 KB] g=21, 7592 evaluated, 743 expanded
+[t=1.6287s, 58340 KB] New best heuristic value for ff: 93
+[t=1.6288s, 58340 KB] g=22, 12440 evaluated, 1300 expanded
+[t=1.63029s, 58340 KB] New best heuristic value for ff: 92
+[t=1.63035s, 58340 KB] g=23, 12449 evaluated, 1301 expanded
+[t=1.63172s, 58340 KB] New best heuristic value for ff: 91
+[t=1.63177s, 58340 KB] g=24, 12458 evaluated, 1302 expanded
+[t=1.63319s, 58340 KB] New best heuristic value for ff: 90
+[t=1.63324s, 58340 KB] g=25, 12467 evaluated, 1303 expanded
+[t=1.63461s, 58340 KB] New best heuristic value for ff: 89
+[t=1.63466s, 58340 KB] g=26, 12476 evaluated, 1304 expanded
+[t=1.63626s, 58340 KB] New best heuristic value for ff: 88
+[t=1.63631s, 58340 KB] g=27, 12486 evaluated, 1305 expanded
+[t=1.63768s, 58340 KB] New best heuristic value for ff: 87
+[t=1.63773s, 58340 KB] g=28, 12495 evaluated, 1306 expanded
+[t=1.6391s, 58340 KB] New best heuristic value for ff: 86
+[t=1.63922s, 58340 KB] g=29, 12504 evaluated, 1307 expanded
+[t=1.64077s, 58340 KB] New best heuristic value for ff: 85
+[t=1.64083s, 58340 KB] g=30, 12514 evaluated, 1308 expanded
+[t=1.64278s, 58340 KB] New best heuristic value for ff: 84
+[t=1.64284s, 58340 KB] g=31, 12527 evaluated, 1309 expanded
+[t=1.73522s, 58476 KB] New best heuristic value for ff: 82
+[t=1.73532s, 58476 KB] g=33, 13174 evaluated, 1390 expanded
+[t=1.73748s, 58476 KB] New best heuristic value for ff: 81
+[t=1.73753s, 58476 KB] g=34, 13188 evaluated, 1391 expanded
+[t=1.73985s, 58476 KB] New best heuristic value for ff: 80
+[t=1.73991s, 58476 KB] g=36, 13205 evaluated, 1393 expanded
+[t=1.74163s, 58476 KB] New best heuristic value for ff: 78
+[t=1.74168s, 58476 KB] g=37, 13218 evaluated, 1394 expanded
+[t=1.76732s, 58476 KB] New best heuristic value for ff: 77
+[t=1.76741s, 58476 KB] g=38, 13403 evaluated, 1419 expanded
+[t=1.76861s, 58476 KB] New best heuristic value for ff: 76
+[t=1.76866s, 58476 KB] g=39, 13412 evaluated, 1420 expanded
+[t=1.77002s, 58476 KB] New best heuristic value for ff: 75
+[t=1.77007s, 58476 KB] g=40, 13422 evaluated, 1421 expanded
+[t=1.7713s, 58476 KB] New best heuristic value for ff: 74
+[t=1.77135s, 58476 KB] g=41, 13431 evaluated, 1422 expanded
+[t=1.77266s, 58476 KB] New best heuristic value for ff: 73
+[t=1.77271s, 58476 KB] g=42, 13441 evaluated, 1423 expanded
+[t=1.77388s, 58476 KB] New best heuristic value for ff: 72
+[t=1.77393s, 58476 KB] g=43, 13450 evaluated, 1424 expanded
+[t=1.77499s, 58476 KB] New best heuristic value for ff: 71
+[t=1.77504s, 58476 KB] g=44, 13458 evaluated, 1425 expanded
+[t=1.77628s, 58476 KB] New best heuristic value for ff: 70
+[t=1.77633s, 58476 KB] g=45, 13467 evaluated, 1426 expanded
+[t=1.77736s, 58476 KB] New best heuristic value for ff: 69
+[t=1.77741s, 58476 KB] g=46, 13475 evaluated, 1427 expanded
+[t=1.77938s, 58476 KB] New best heuristic value for ff: 68
+[t=1.77943s, 58476 KB] g=47, 13491 evaluated, 1428 expanded
+[t=1.83869s, 58476 KB] New best heuristic value for ff: 67
+[t=1.83878s, 58476 KB] g=48, 13972 evaluated, 1494 expanded
+[t=1.84317s, 58476 KB] New best heuristic value for ff: 66
+[t=1.84322s, 58476 KB] g=49, 14009 evaluated, 1499 expanded
+[t=1.88255s, 58476 KB] New best heuristic value for ff: 65
+[t=1.88266s, 58476 KB] g=50, 14331 evaluated, 1550 expanded
+[t=1.88346s, 58476 KB] New best heuristic value for ff: 64
+[t=1.88351s, 58476 KB] g=51, 14337 evaluated, 1551 expanded
+[t=1.88437s, 58476 KB] New best heuristic value for ff: 63
+[t=1.88442s, 58476 KB] g=52, 14343 evaluated, 1552 expanded
+[t=1.88524s, 58476 KB] New best heuristic value for ff: 62
+[t=1.88529s, 58476 KB] g=53, 14349 evaluated, 1553 expanded
+[t=1.88672s, 58736 KB] New best heuristic value for ff: 61
+[t=1.88677s, 58736 KB] g=54, 14355 evaluated, 1554 expanded
+[t=1.88771s, 58736 KB] New best heuristic value for ff: 60
+[t=1.88776s, 58736 KB] g=55, 14362 evaluated, 1555 expanded
+[t=1.8885s, 58736 KB] New best heuristic value for ff: 59
+[t=1.88856s, 58736 KB] g=56, 14367 evaluated, 1556 expanded
+[t=1.88961s, 58736 KB] New best heuristic value for ff: 58
+[t=1.88966s, 58736 KB] g=57, 14375 evaluated, 1557 expanded
+[t=1.89047s, 58736 KB] New best heuristic value for ff: 57
+[t=1.89052s, 58736 KB] g=58, 14381 evaluated, 1558 expanded
+[t=1.89143s, 58736 KB] New best heuristic value for ff: 56
+[t=1.89148s, 58736 KB] g=59, 14388 evaluated, 1559 expanded
+[t=1.89233s, 58736 KB] New best heuristic value for ff: 55
+[t=1.89238s, 58736 KB] g=60, 14394 evaluated, 1560 expanded
+[t=1.95237s, 58740 KB] New best heuristic value for ff: 53
+[t=1.95247s, 58740 KB] g=62, 14882 evaluated, 1647 expanded
+[t=1.95377s, 58740 KB] New best heuristic value for ff: 52
+[t=1.95382s, 58740 KB] g=63, 14892 evaluated, 1648 expanded
+[t=1.9542s, 58740 KB] New best heuristic value for ff: 51
+[t=1.95425s, 58740 KB] g=64, 14895 evaluated, 1649 expanded
+[t=1.95587s, 58740 KB] New best heuristic value for ff: 50
+[t=1.95593s, 58740 KB] g=66, 14908 evaluated, 1651 expanded
+[t=1.95663s, 58740 KB] New best heuristic value for ff: 49
+[t=1.95671s, 58740 KB] g=67, 14914 evaluated, 1652 expanded
+[t=1.95738s, 58740 KB] New best heuristic value for ff: 48
+[t=1.95742s, 58740 KB] g=68, 14920 evaluated, 1653 expanded
+[t=12.3169s, 65092 KB] New best heuristic value for ff: 46
+[t=12.317s, 65092 KB] g=69, 92907 evaluated, 14353 expanded
+[t=12.4518s, 65224 KB] New best heuristic value for ff: 45
+[t=12.4519s, 65224 KB] g=70, 94096 evaluated, 14663 expanded
+[t=12.4523s, 65224 KB] New best heuristic value for ff: 44
+[t=12.4524s, 65224 KB] g=71, 94099 evaluated, 14664 expanded
+[t=12.4528s, 65224 KB] New best heuristic value for ff: 43
+[t=12.4529s, 65224 KB] g=72, 94102 evaluated, 14665 expanded
+[t=12.4533s, 65224 KB] New best heuristic value for ff: 42
+[t=12.4534s, 65224 KB] g=73, 94105 evaluated, 14666 expanded
+[t=12.4538s, 65224 KB] New best heuristic value for ff: 41
+[t=12.4538s, 65224 KB] g=74, 94108 evaluated, 14667 expanded
+[t=12.4543s, 65224 KB] New best heuristic value for ff: 40
+[t=12.4543s, 65224 KB] g=75, 94111 evaluated, 14668 expanded
+[t=12.4547s, 65224 KB] New best heuristic value for ff: 39
+[t=12.4548s, 65224 KB] g=76, 94114 evaluated, 14669 expanded
+[t=12.4554s, 65224 KB] New best heuristic value for ff: 38
+[t=12.4554s, 65224 KB] g=77, 94118 evaluated, 14670 expanded
+[t=12.4557s, 65224 KB] New best heuristic value for ff: 37
+[t=12.4558s, 65224 KB] g=78, 94120 evaluated, 14671 expanded
+[t=12.4564s, 65224 KB] New best heuristic value for ff: 36
+[t=12.4565s, 65224 KB] g=79, 94125 evaluated, 14672 expanded
+[t=12.4569s, 65224 KB] New best heuristic value for ff: 35
+[t=12.4569s, 65224 KB] g=80, 94128 evaluated, 14673 expanded
+[t=12.4575s, 65224 KB] New best heuristic value for ff: 34
+[t=12.4575s, 65224 KB] g=81, 94132 evaluated, 14674 expanded
+[t=12.4579s, 65224 KB] New best heuristic value for ff: 33
+[t=12.458s, 65224 KB] g=82, 94135 evaluated, 14675 expanded
+[t=12.4585s, 65224 KB] New best heuristic value for ff: 32
+[t=12.4586s, 65224 KB] g=83, 94139 evaluated, 14676 expanded
+[t=12.459s, 65224 KB] New best heuristic value for ff: 31
+[t=12.459s, 65224 KB] g=84, 94142 evaluated, 14677 expanded
+[t=12.4685s, 65224 KB] New best heuristic value for ff: 30
+[t=12.4686s, 65224 KB] g=85, 94224 evaluated, 14708 expanded
+[t=12.4691s, 65224 KB] New best heuristic value for ff: 29
+[t=12.4692s, 65224 KB] g=86, 94228 evaluated, 14709 expanded
+[t=12.4695s, 65224 KB] New best heuristic value for ff: 28
+[t=12.4695s, 65224 KB] g=87, 94230 evaluated, 14710 expanded
+[t=12.47s, 65224 KB] New best heuristic value for ff: 27
+[t=12.4701s, 65224 KB] g=88, 94234 evaluated, 14711 expanded
+[t=12.4704s, 65224 KB] New best heuristic value for ff: 26
+[t=12.4704s, 65224 KB] g=89, 94236 evaluated, 14712 expanded
+[t=12.4709s, 65224 KB] New best heuristic value for ff: 25
+[t=12.471s, 65224 KB] g=90, 94240 evaluated, 14713 expanded
+[t=12.4712s, 65224 KB] New best heuristic value for ff: 24
+[t=12.4712s, 65224 KB] g=91, 94241 evaluated, 14714 expanded
+[t=12.4717s, 65224 KB] New best heuristic value for ff: 23
+[t=12.4718s, 65224 KB] g=92, 94245 evaluated, 14715 expanded
+[t=12.472s, 65224 KB] New best heuristic value for ff: 22
+[t=12.4721s, 65224 KB] g=93, 94247 evaluated, 14716 expanded
+[t=12.4725s, 65224 KB] New best heuristic value for ff: 21
+[t=12.4725s, 65224 KB] g=94, 94250 evaluated, 14717 expanded
+[t=12.4728s, 65224 KB] New best heuristic value for ff: 20
+[t=12.4728s, 65224 KB] g=95, 94252 evaluated, 14718 expanded
+[t=12.4762s, 65224 KB] New best heuristic value for ff: 19
+[t=12.4763s, 65224 KB] g=96, 94281 evaluated, 14730 expanded
+[t=12.4769s, 65224 KB] New best heuristic value for ff: 18
+[t=12.4769s, 65224 KB] g=97, 94286 evaluated, 14731 expanded
+[t=12.4773s, 65224 KB] New best heuristic value for ff: 17
+[t=12.4773s, 65224 KB] g=98, 94289 evaluated, 14732 expanded
+[t=12.4777s, 65224 KB] New best heuristic value for ff: 16
+[t=12.4778s, 65224 KB] g=99, 94292 evaluated, 14733 expanded
+[t=12.4781s, 65224 KB] New best heuristic value for ff: 15
+[t=12.4782s, 65224 KB] g=100, 94295 evaluated, 14734 expanded
+[t=12.4785s, 65224 KB] New best heuristic value for ff: 14
+[t=12.4785s, 65224 KB] g=101, 94297 evaluated, 14735 expanded
+[t=12.4791s, 65224 KB] New best heuristic value for ff: 13
+[t=12.4792s, 65224 KB] g=102, 94302 evaluated, 14736 expanded
+[t=12.4796s, 65224 KB] New best heuristic value for ff: 12
+[t=12.4797s, 65224 KB] g=103, 94306 evaluated, 14737 expanded
+[t=12.4801s, 65224 KB] New best heuristic value for ff: 11
+[t=12.4802s, 65224 KB] g=104, 94310 evaluated, 14738 expanded
+[t=12.4808s, 65224 KB] New best heuristic value for ff: 10
+[t=12.4809s, 65224 KB] g=105, 94315 evaluated, 14739 expanded
+[t=12.4812s, 65224 KB] New best heuristic value for ff: 9
+[t=12.4813s, 65224 KB] g=106, 94317 evaluated, 14740 expanded
+[t=12.4815s, 65224 KB] New best heuristic value for ff: 8
+[t=12.4816s, 65224 KB] g=107, 94319 evaluated, 14741 expanded
+[t=12.8207s, 65488 KB] New best heuristic value for ff: 7
+[t=12.8208s, 65488 KB] g=109, 97369 evaluated, 16585 expanded
+[t=12.821s, 65488 KB] New best heuristic value for ff: 6
+[t=12.821s, 65488 KB] g=109, 97370 evaluated, 16585 expanded
+[t=12.8213s, 65488 KB] New best heuristic value for ff: 5
+[t=12.8213s, 65488 KB] g=110, 97372 evaluated, 16586 expanded
+[t=12.8216s, 65488 KB] New best heuristic value for ff: 4
+[t=12.8216s, 65488 KB] g=111, 97374 evaluated, 16587 expanded
+[t=12.8221s, 65488 KB] New best heuristic value for ff: 3
+[t=12.8221s, 65488 KB] g=112, 97378 evaluated, 16588 expanded
+[t=12.8223s, 65488 KB] New best heuristic value for ff: 2
+[t=12.8223s, 65488 KB] g=113, 97379 evaluated, 16589 expanded
+[t=12.8225s, 65488 KB] New best heuristic value for ff: 1
+[t=12.8225s, 65488 KB] g=114, 97380 evaluated, 16590 expanded
+[t=12.8227s, 65488 KB] New best heuristic value for ff: 0
+[t=12.8227s, 65488 KB] g=115, 97382 evaluated, 16591 expanded
+[t=12.8228s, 65488 KB] Solution found!
+[t=12.8228s, 65488 KB] Actual search time: 12.8135s
+move_seg_rwy_0_1300_seg_27_0_150_south_south_medium airplane_4xekd (1)
+move_seg_27_0_150_seg_b_27_0_100_south_north_medium airplane_4xekd (1)
+move_seg_b_27_0_100_seg_n6_b_0_100_north_north_medium airplane_4xekd (1)
+move_seg_n6_b_0_100_seg_n5_n6_0_100_north_north_medium airplane_4xekd (1)
+move_seg_n5_n6_0_100_seg_n4_n5_0_86_north_north_medium airplane_4xekd (1)
+move_seg_n4_n5_0_86_seg_n4_n5_6_0_86_north_north_medium airplane_4xekd (1)
+move_seg_n4_n5_6_0_86_seg_n4_n5_5_0_86_north_north_medium airplane_4xekd (1)
+move_seg_n4_n5_5_0_86_seg_n4_n5_4_0_85_north_north_medium airplane_4xekd (1)
+pushback_seg_a02_0_100_seg_c5_c_a02_0_100_south_south_medium airplane_daewh (1)
+pushback_seg_a01_0_100_seg_c3_c_a01_0_100_south_south_medium airplane_wurst (1)
+pushback_seg_c5_c_a02_0_100_seg_c5_c6_0_50_south_north_medium airplane_daewh (1)
+startup_seg_c5_c6_0_50_north_medium airplane_daewh (1)
+pushback_seg_c3_c_a01_0_100_seg_c3_c4_0_50_south_north_medium airplane_wurst (1)
+startup_seg_c3_c4_0_50_north_medium airplane_wurst (1)
+move_seg_c3_c4_0_50_seg_c2_c3_0_100_north_north_medium airplane_wurst (1)
+move_seg_c2_c3_0_100_seg_c_c2_0_100_north_north_medium airplane_wurst (1)
+move_seg_c_c2_0_100_seg_n_c_0_100_north_north_medium airplane_wurst (1)
+move_seg_n_c_0_100_seg_n3_n_0_100_north_north_medium airplane_wurst (1)
+move_seg_n3_n_0_100_seg_n2_n3_0_85_north_north_medium airplane_wurst (1)
+move_seg_n2_n3_0_85_seg_n2_n3_6_0_86_north_north_medium airplane_wurst (1)
+move_seg_n2_n3_6_0_86_seg_n2_n3_5_0_86_north_north_medium airplane_wurst (1)
+move_seg_n2_n3_5_0_86_seg_n2_n3_4_0_85_north_north_medium airplane_wurst (1)
+move_seg_n2_n3_4_0_85_seg_n2_n3_3_0_86_north_north_medium airplane_wurst (1)
+move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_wurst (1)
+move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_wurst (1)
+move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_wurst (1)
+move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_wurst (1)
+move_seg_c5_c6_0_50_seg_c4_c5_0_50_north_north_medium airplane_daewh (1)
+move_seg_c4_c5_0_50_seg_c3_c4_0_50_north_north_medium airplane_daewh (1)
+move_seg_c3_c4_0_50_seg_c2_c3_0_100_north_north_medium airplane_daewh (1)
+move_seg_c2_c3_0_100_seg_c_c2_0_100_north_north_medium airplane_daewh (1)
+move_seg_c_c2_0_100_seg_n_c_0_100_north_north_medium airplane_daewh (1)
+move_seg_n_c_0_100_seg_n3_n_0_100_north_north_medium airplane_daewh (1)
+move_seg_n3_n_0_100_seg_n2_n3_0_85_north_north_medium airplane_daewh (1)
+move_seg_n2_n3_0_85_seg_n2_n3_6_0_86_north_north_medium airplane_daewh (1)
+move_seg_n2_n3_6_0_86_seg_n2_n3_5_0_86_north_north_medium airplane_daewh (1)
+move_seg_n2_n3_5_0_86_seg_n2_n3_4_0_85_north_north_medium airplane_daewh (1)
+move_seg_n2_n3_4_0_85_seg_n2_n3_3_0_86_north_north_medium airplane_daewh (1)
+move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_daewh (1)
+move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_daewh (1)
+move_seg_n4_n5_1_0_85_seg_n_n4_0_100_north_north_medium airplane_cfbeg (1)
+move_seg_n_n4_0_100_seg_n_c_0_100_north_south_medium airplane_cfbeg (1)
+move_seg_n4_n5_2_0_86_seg_n4_n5_1_0_85_north_north_medium airplane_holgi (1)
+move_seg_n4_n5_4_0_85_seg_n4_n5_3_0_86_north_north_medium airplane_4xekd (1)
+pushback_seg_b02_0_100_seg_c5_c_b02_0_100_south_south_medium airplane_dfboy (1)
+move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_wurst (1)
+move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_wurst (1)
+move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_daewh (1)
+move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_daewh (1)
+takeoff_seg_09_0_150_south airplane_wurst (1)
+move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_daewh (1)
+move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_daewh (1)
+takeoff_seg_09_0_150_south airplane_daewh (1)
+move_seg_n_c_0_100_seg_c_c2_0_100_south_south_medium airplane_cfbeg (1)
+move_seg_c_c2_0_100_seg_c2_c3_0_100_south_south_medium airplane_cfbeg (1)
+move_seg_c2_c3_0_100_seg_c3_c_a01_0_100_south_south_medium airplane_cfbeg (1)
+move_seg_c3_c_a01_0_100_seg_a01_0_100_south_south_medium airplane_cfbeg (1)
+park_seg_a01_0_100_south airplane_cfbeg (1)
+pushback_seg_b01_0_100_seg_c3_c_b01_0_100_south_south_medium airplane_horst (1)
+pushback_seg_c5_c_b02_0_100_seg_c5_c6_0_50_south_north_medium airplane_dfboy (1)
+startup_seg_c5_c6_0_50_north_medium airplane_dfboy (1)
+pushback_seg_c3_c_b01_0_100_seg_c3_c4_0_50_south_north_medium airplane_horst (1)
+startup_seg_c3_c4_0_50_north_medium airplane_horst (1)
+move_seg_c3_c4_0_50_seg_c2_c3_0_100_north_north_medium airplane_horst (1)
+move_seg_c2_c3_0_100_seg_c_c2_0_100_north_north_medium airplane_horst (1)
+move_seg_c_c2_0_100_seg_n_c_0_100_north_north_medium airplane_horst (1)
+move_seg_n_c_0_100_seg_n3_n_0_100_north_north_medium airplane_horst (1)
+move_seg_n3_n_0_100_seg_n2_n3_0_85_north_north_medium airplane_horst (1)
+move_seg_n2_n3_0_85_seg_n2_n3_6_0_86_north_north_medium airplane_horst (1)
+move_seg_n2_n3_6_0_86_seg_n2_n3_5_0_86_north_north_medium airplane_horst (1)
+move_seg_n2_n3_5_0_86_seg_n2_n3_4_0_85_north_north_medium airplane_horst (1)
+move_seg_n2_n3_4_0_85_seg_n2_n3_3_0_86_north_north_medium airplane_horst (1)
+move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_horst (1)
+move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_horst (1)
+move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_horst (1)
+move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_horst (1)
+move_seg_c5_c6_0_50_seg_c4_c5_0_50_north_north_medium airplane_dfboy (1)
+move_seg_c4_c5_0_50_seg_c3_c4_0_50_north_north_medium airplane_dfboy (1)
+move_seg_c3_c4_0_50_seg_c2_c3_0_100_north_north_medium airplane_dfboy (1)
+move_seg_c2_c3_0_100_seg_c_c2_0_100_north_north_medium airplane_dfboy (1)
+move_seg_c_c2_0_100_seg_n_c_0_100_north_north_medium airplane_dfboy (1)
+move_seg_n_c_0_100_seg_n3_n_0_100_north_north_medium airplane_dfboy (1)
+move_seg_n3_n_0_100_seg_n2_n3_0_85_north_north_medium airplane_dfboy (1)
+move_seg_n2_n3_0_85_seg_n2_n3_6_0_86_north_north_medium airplane_dfboy (1)
+move_seg_n2_n3_6_0_86_seg_n2_n3_5_0_86_north_north_medium airplane_dfboy (1)
+move_seg_n2_n3_5_0_86_seg_n2_n3_4_0_85_north_north_medium airplane_dfboy (1)
+move_seg_n2_n3_4_0_85_seg_n2_n3_3_0_86_north_north_medium airplane_dfboy (1)
+move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_dfboy (1)
+move_seg_n4_n5_1_0_85_seg_n_n4_0_100_north_north_medium airplane_holgi (1)
+move_seg_n4_n5_3_0_86_seg_n4_n5_2_0_86_north_north_medium airplane_4xekd (1)
+move_seg_n_n4_0_100_seg_n_c_0_100_north_south_medium airplane_holgi (1)
+move_seg_n4_n5_2_0_86_seg_n4_n5_1_0_85_north_north_medium airplane_4xekd (1)
+move_seg_n_c_0_100_seg_c_c2_0_100_south_south_medium airplane_holgi (1)
+move_seg_c_c2_0_100_seg_c2_c3_0_100_south_south_medium airplane_holgi (1)
+move_seg_c2_c3_0_100_seg_c3_c4_0_50_south_south_medium airplane_holgi (1)
+move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_dfboy (1)
+move_seg_n4_n5_1_0_85_seg_n_n4_0_100_north_north_medium airplane_4xekd (1)
+move_seg_n_n4_0_100_seg_n_c_0_100_north_south_medium airplane_4xekd (1)
+move_seg_n_c_0_100_seg_c_c2_0_100_south_south_medium airplane_4xekd (1)
+move_seg_c3_c4_0_50_seg_c4_c5_0_50_south_south_medium airplane_holgi (1)
+move_seg_c_c2_0_100_seg_c2_c3_0_100_south_south_medium airplane_4xekd (1)
+move_seg_c2_c3_0_100_seg_c3_c_b01_0_100_south_south_medium airplane_4xekd (1)
+move_seg_c3_c_b01_0_100_seg_b01_0_100_south_south_medium airplane_4xekd (1)
+park_seg_b01_0_100_south airplane_4xekd (1)
+move_seg_c4_c5_0_50_seg_c5_c_b02_0_100_south_south_medium airplane_holgi (1)
+move_seg_c5_c_b02_0_100_seg_b02_0_100_south_south_medium airplane_holgi (1)
+park_seg_b02_0_100_south airplane_holgi (1)
+move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_horst (1)
+move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_horst (1)
+move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_dfboy (1)
+move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_dfboy (1)
+takeoff_seg_09_0_150_south airplane_horst (1)
+move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_dfboy (1)
+move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_dfboy (1)
+takeoff_seg_09_0_150_south airplane_dfboy (1)
+[t=12.8229s, 65488 KB] Plan length: 115 step(s).
+[t=12.8229s, 65488 KB] Plan cost: 115
+[t=12.8229s, 65488 KB] Expanded 16592 state(s).
+[t=12.8229s, 65488 KB] Reopened 0 state(s).
+[t=12.8229s, 65488 KB] Evaluated 97382 state(s).
+[t=12.8229s, 65488 KB] Evaluations: 97382
+[t=12.8229s, 65488 KB] Generated 135767 state(s).
+[t=12.8229s, 65488 KB] Dead ends: 45616 state(s).
+[t=12.8229s, 65488 KB] Expanded until last jump: 592 state(s).
+[t=12.8229s, 65488 KB] Reopened until last jump: 0 state(s).
+[t=12.8229s, 65488 KB] Evaluated until last jump: 6224 state(s).
+[t=12.8229s, 65488 KB] Generated until last jump: 7776 state(s).
+[t=12.8229s, 65488 KB] Number of registered states: 97382
+[t=12.8229s, 65488 KB] Int hash set load factor: 97382/131072 = 0.742966
+[t=12.8229s, 65488 KB] Int hash set resizes: 17
+[t=12.8229s, 65488 KB] Search time: 12.8141s
+[t=12.8229s, 65488 KB] Total time: 12.8229s
+Solution found.
+Peak memory: 65488 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+-----------PLAN-----------
+
+(move_seg_rwy_0_1300_seg_27_0_150_south_south_medium airplane_4xekd)
+(move_seg_27_0_150_seg_b_27_0_100_south_north_medium airplane_4xekd)
+(move_seg_b_27_0_100_seg_n6_b_0_100_north_north_medium airplane_4xekd)
+(move_seg_n6_b_0_100_seg_n5_n6_0_100_north_north_medium airplane_4xekd)
+(move_seg_n5_n6_0_100_seg_n4_n5_0_86_north_north_medium airplane_4xekd)
+(move_seg_n4_n5_0_86_seg_n4_n5_6_0_86_north_north_medium airplane_4xekd)
+(move_seg_n4_n5_6_0_86_seg_n4_n5_5_0_86_north_north_medium airplane_4xekd)
+(move_seg_n4_n5_5_0_86_seg_n4_n5_4_0_85_north_north_medium airplane_4xekd)
+(pushback_seg_a02_0_100_seg_c5_c_a02_0_100_south_south_medium airplane_daewh)
+(pushback_seg_a01_0_100_seg_c3_c_a01_0_100_south_south_medium airplane_wurst)
+(pushback_seg_c5_c_a02_0_100_seg_c5_c6_0_50_south_north_medium airplane_daewh)
+(startup_seg_c5_c6_0_50_north_medium airplane_daewh)
+(pushback_seg_c3_c_a01_0_100_seg_c3_c4_0_50_south_north_medium airplane_wurst)
+(startup_seg_c3_c4_0_50_north_medium airplane_wurst)
+(move_seg_c3_c4_0_50_seg_c2_c3_0_100_north_north_medium airplane_wurst)
+(move_seg_c2_c3_0_100_seg_c_c2_0_100_north_north_medium airplane_wurst)
+(move_seg_c_c2_0_100_seg_n_c_0_100_north_north_medium airplane_wurst)
+(move_seg_n_c_0_100_seg_n3_n_0_100_north_north_medium airplane_wurst)
+(move_seg_n3_n_0_100_seg_n2_n3_0_85_north_north_medium airplane_wurst)
+(move_seg_n2_n3_0_85_seg_n2_n3_6_0_86_north_north_medium airplane_wurst)
+(move_seg_n2_n3_6_0_86_seg_n2_n3_5_0_86_north_north_medium airplane_wurst)
+(move_seg_n2_n3_5_0_86_seg_n2_n3_4_0_85_north_north_medium airplane_wurst)
+(move_seg_n2_n3_4_0_85_seg_n2_n3_3_0_86_north_north_medium airplane_wurst)
+(move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_wurst)
+(move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_wurst)
+(move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_wurst)
+(move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_wurst)
+(move_seg_c5_c6_0_50_seg_c4_c5_0_50_north_north_medium airplane_daewh)
+(move_seg_c4_c5_0_50_seg_c3_c4_0_50_north_north_medium airplane_daewh)
+(move_seg_c3_c4_0_50_seg_c2_c3_0_100_north_north_medium airplane_daewh)
+(move_seg_c2_c3_0_100_seg_c_c2_0_100_north_north_medium airplane_daewh)
+(move_seg_c_c2_0_100_seg_n_c_0_100_north_north_medium airplane_daewh)
+(move_seg_n_c_0_100_seg_n3_n_0_100_north_north_medium airplane_daewh)
+(move_seg_n3_n_0_100_seg_n2_n3_0_85_north_north_medium airplane_daewh)
+(move_seg_n2_n3_0_85_seg_n2_n3_6_0_86_north_north_medium airplane_daewh)
+(move_seg_n2_n3_6_0_86_seg_n2_n3_5_0_86_north_north_medium airplane_daewh)
+(move_seg_n2_n3_5_0_86_seg_n2_n3_4_0_85_north_north_medium airplane_daewh)
+(move_seg_n2_n3_4_0_85_seg_n2_n3_3_0_86_north_north_medium airplane_daewh)
+(move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_daewh)
+(move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_daewh)
+(move_seg_n4_n5_1_0_85_seg_n_n4_0_100_north_north_medium airplane_cfbeg)
+(move_seg_n_n4_0_100_seg_n_c_0_100_north_south_medium airplane_cfbeg)
+(move_seg_n4_n5_2_0_86_seg_n4_n5_1_0_85_north_north_medium airplane_holgi)
+(move_seg_n4_n5_4_0_85_seg_n4_n5_3_0_86_north_north_medium airplane_4xekd)
+(pushback_seg_b02_0_100_seg_c5_c_b02_0_100_south_south_medium airplane_dfboy)
+(move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_wurst)
+(move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_wurst)
+(move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_daewh)
+(move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_daewh)
+(takeoff_seg_09_0_150_south airplane_wurst)
+(move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_daewh)
+(move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_daewh)
+(takeoff_seg_09_0_150_south airplane_daewh)
+(move_seg_n_c_0_100_seg_c_c2_0_100_south_south_medium airplane_cfbeg)
+(move_seg_c_c2_0_100_seg_c2_c3_0_100_south_south_medium airplane_cfbeg)
+(move_seg_c2_c3_0_100_seg_c3_c_a01_0_100_south_south_medium airplane_cfbeg)
+(move_seg_c3_c_a01_0_100_seg_a01_0_100_south_south_medium airplane_cfbeg)
+(park_seg_a01_0_100_south airplane_cfbeg)
+(pushback_seg_b01_0_100_seg_c3_c_b01_0_100_south_south_medium airplane_horst)
+(pushback_seg_c5_c_b02_0_100_seg_c5_c6_0_50_south_north_medium airplane_dfboy)
+(startup_seg_c5_c6_0_50_north_medium airplane_dfboy)
+(pushback_seg_c3_c_b01_0_100_seg_c3_c4_0_50_south_north_medium airplane_horst)
+(startup_seg_c3_c4_0_50_north_medium airplane_horst)
+(move_seg_c3_c4_0_50_seg_c2_c3_0_100_north_north_medium airplane_horst)
+(move_seg_c2_c3_0_100_seg_c_c2_0_100_north_north_medium airplane_horst)
+(move_seg_c_c2_0_100_seg_n_c_0_100_north_north_medium airplane_horst)
+(move_seg_n_c_0_100_seg_n3_n_0_100_north_north_medium airplane_horst)
+(move_seg_n3_n_0_100_seg_n2_n3_0_85_north_north_medium airplane_horst)
+(move_seg_n2_n3_0_85_seg_n2_n3_6_0_86_north_north_medium airplane_horst)
+(move_seg_n2_n3_6_0_86_seg_n2_n3_5_0_86_north_north_medium airplane_horst)
+(move_seg_n2_n3_5_0_86_seg_n2_n3_4_0_85_north_north_medium airplane_horst)
+(move_seg_n2_n3_4_0_85_seg_n2_n3_3_0_86_north_north_medium airplane_horst)
+(move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_horst)
+(move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_horst)
+(move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_horst)
+(move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_horst)
+(move_seg_c5_c6_0_50_seg_c4_c5_0_50_north_north_medium airplane_dfboy)
+(move_seg_c4_c5_0_50_seg_c3_c4_0_50_north_north_medium airplane_dfboy)
+(move_seg_c3_c4_0_50_seg_c2_c3_0_100_north_north_medium airplane_dfboy)
+(move_seg_c2_c3_0_100_seg_c_c2_0_100_north_north_medium airplane_dfboy)
+(move_seg_c_c2_0_100_seg_n_c_0_100_north_north_medium airplane_dfboy)
+(move_seg_n_c_0_100_seg_n3_n_0_100_north_north_medium airplane_dfboy)
+(move_seg_n3_n_0_100_seg_n2_n3_0_85_north_north_medium airplane_dfboy)
+(move_seg_n2_n3_0_85_seg_n2_n3_6_0_86_north_north_medium airplane_dfboy)
+(move_seg_n2_n3_6_0_86_seg_n2_n3_5_0_86_north_north_medium airplane_dfboy)
+(move_seg_n2_n3_5_0_86_seg_n2_n3_4_0_85_north_north_medium airplane_dfboy)
+(move_seg_n2_n3_4_0_85_seg_n2_n3_3_0_86_north_north_medium airplane_dfboy)
+(move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_dfboy)
+(move_seg_n4_n5_1_0_85_seg_n_n4_0_100_north_north_medium airplane_holgi)
+(move_seg_n4_n5_3_0_86_seg_n4_n5_2_0_86_north_north_medium airplane_4xekd)
+(move_seg_n_n4_0_100_seg_n_c_0_100_north_south_medium airplane_holgi)
+(move_seg_n4_n5_2_0_86_seg_n4_n5_1_0_85_north_north_medium airplane_4xekd)
+(move_seg_n_c_0_100_seg_c_c2_0_100_south_south_medium airplane_holgi)
+(move_seg_c_c2_0_100_seg_c2_c3_0_100_south_south_medium airplane_holgi)
+(move_seg_c2_c3_0_100_seg_c3_c4_0_50_south_south_medium airplane_holgi)
+(move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_dfboy)
+(move_seg_n4_n5_1_0_85_seg_n_n4_0_100_north_north_medium airplane_4xekd)
+(move_seg_n_n4_0_100_seg_n_c_0_100_north_south_medium airplane_4xekd)
+(move_seg_n_c_0_100_seg_c_c2_0_100_south_south_medium airplane_4xekd)
+(move_seg_c3_c4_0_50_seg_c4_c5_0_50_south_south_medium airplane_holgi)
+(move_seg_c_c2_0_100_seg_c2_c3_0_100_south_south_medium airplane_4xekd)
+(move_seg_c2_c3_0_100_seg_c3_c_b01_0_100_south_south_medium airplane_4xekd)
+(move_seg_c3_c_b01_0_100_seg_b01_0_100_south_south_medium airplane_4xekd)
+(park_seg_b01_0_100_south airplane_4xekd)
+(move_seg_c4_c5_0_50_seg_c5_c_b02_0_100_south_south_medium airplane_holgi)
+(move_seg_c5_c_b02_0_100_seg_b02_0_100_south_south_medium airplane_holgi)
+(park_seg_b02_0_100_south airplane_holgi)
+(move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_horst)
+(move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_horst)
+(move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_dfboy)
+(move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_dfboy)
+(takeoff_seg_09_0_150_south airplane_horst)
+(move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_dfboy)
+(move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_dfboy)
+(takeoff_seg_09_0_150_south airplane_dfboy)
+; cost = 115 (unit cost)

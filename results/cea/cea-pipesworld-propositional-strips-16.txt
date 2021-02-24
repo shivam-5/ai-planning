@@ -1,0 +1,115 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 1799.97s
+INFO     translator memory limit: 8192 MB
+INFO     translator command line string: /usr/bin/python3 /src/fd/builds/release/bin/translate/translate.py pddl-instances/ipc-2006/domains/pipesworld-propositional-strips/domains/domain-16.pddl pddl-instances/ipc-2006/domains/pipesworld-propositional-strips/instances/instance-16.pddl --sas-file output.sas
+Parsing...
+Parsing: [1.210s CPU, 1.208s wall-clock]
+Normalizing task... [0.290s CPU, 0.297s wall-clock]
+Instantiating...
+Generating Datalog program... [0.240s CPU, 0.231s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.300s CPU, 0.310s wall-clock]
+Preparing model... [0.370s CPU, 0.362s wall-clock]
+Generated 30381 rules.
+Computing model... [0.100s CPU, 0.104s wall-clock]
+6380 relevant atoms
+0 auxiliary atoms
+6380 final queue length
+30435 total queue pushes
+Completing instantiation... [0.450s CPU, 0.450s wall-clock]
+Instantiating: [1.480s CPU, 1.479s wall-clock]
+Computing fact groups...
+Finding invariants...
+303 initial candidates
+Finding invariants: [32.840s CPU, 32.839s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+225 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [32.840s CPU, 32.842s wall-clock]
+Building STRIPS to SAS dictionary... [0.010s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.016s wall-clock]
+Translating task: [0.410s CPU, 0.413s wall-clock]
+11480 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+38 propositions removed
+Detecting unreachable propositions: [0.260s CPU, 0.260s wall-clock]
+Reordering and filtering variables...
+263 of 263 variables necessary.
+0 of 38 mutex groups necessary.
+6076 of 6076 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.100s CPU, 0.100s wall-clock]
+Translator variables: 263
+Translator derived variables: 0
+Translator facts: 528
+Translator goal facts: 8
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 6076
+Translator axioms: 0
+Translator task size: 66291
+Translator peak memory: 299092 KB
+Writing output... [0.080s CPU, 0.080s wall-clock]
+Done! [36.690s CPU, 36.696s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: 1763.2s
+INFO     search memory limit: 8192 MB
+INFO     search command line string: /src/fd/builds/release/bin/downward --search 'astar(cea())' --internal-plan-file plan.txt < output.sas
+[t=0.000133955s, 55864 KB] reading input...
+[t=0.0273291s, 58416 KB] done reading input!
+[t=0.0282874s, 58680 KB] Initializing context-enhanced additive heuristic...
+[t=0.0848596s, 64248 KB] Building successor generator...done!
+[t=0.0876015s, 64968 KB] peak memory difference for successor generator creation: 720 KB
+[t=0.087639s, 64968 KB] time for successor generation creation: 0.00250235s
+[t=0.0877265s, 64968 KB] Variables: 263
+[t=0.0877785s, 64968 KB] FactPairs: 528
+[t=0.0878267s, 64968 KB] Bytes per state: 36
+[t=0.0879546s, 64968 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.090122s, 66744 KB] New best heuristic value for cea: 60
+[t=0.0901901s, 66744 KB] g=0, 1 evaluated, 0 expanded
+[t=0.0902353s, 66744 KB] f = 60, 1 evaluated, 0 expanded
+[t=0.0902841s, 66744 KB] Initial heuristic value for cea: 60
+[t=0.0903333s, 66744 KB] pruning method: none
+[t=0.0972532s, 67736 KB] f = 64, 7 evaluated, 1 expanded
+[t=0.0994028s, 67736 KB] New best heuristic value for cea: 53
+[t=0.0994584s, 67736 KB] g=2, 9 evaluated, 2 expanded
+[t=0.409462s, 68004 KB] f = 66, 329 evaluated, 47 expanded
+[t=0.490033s, 68004 KB] New best heuristic value for cea: 51
+[t=0.490129s, 68004 KB] g=4, 414 evaluated, 58 expanded
+[t=75.8723s, 73676 KB] f = 67, 76535 evaluated, 12693 expanded
+[t=109.942s, 75704 KB] f = 68, 110960 evaluated, 19258 expanded
+[t=193.097s, 81648 KB] f = 69, 194881 evaluated, 36824 expanded, 113 reopened
+[t=280.213s, 88876 KB] f = 70, 283130 evaluated, 57455 expanded, 323 reopened
+[t=564.432s, 109860 KB] f = 71, 572863 evaluated, 126990 expanded, 2173 reopened
+[t=670.25s, 116132 KB] f = 72, 681147 evaluated, 152604 expanded, 2173 reopened
+[t=922.343s, 145888 KB] New best heuristic value for cea: 46
+[t=922.343s, 145888 KB] g=10, 937727 evaluated, 212808 expanded, 2681 reopened
+[t=922.451s, 145888 KB] New best heuristic value for cea: 44
+[t=922.451s, 145888 KB] g=12, 937840 evaluated, 212813 expanded, 2681 reopened
+Peak memory: 220180 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+Remove intermediate file output.sas
+search exit code: 23
+
+Driver aborting after search
+-----------PLAN-----------
+
+cat: plan.txt: No such file or directory

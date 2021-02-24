@@ -1,0 +1,157 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 1799.97s
+INFO     translator memory limit: 8192 MB
+INFO     translator command line string: /usr/bin/python3 /src/fd/builds/release/bin/translate/translate.py pddl-instances/ipc-2002/domains/depots-strips-automatic/domain.pddl pddl-instances/ipc-2002/domains/depots-strips-automatic/instances/instance-9.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.002s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 43 rules.
+Computing model... [0.040s CPU, 0.033s wall-clock]
+2520 relevant atoms
+1935 auxiliary atoms
+4455 final queue length
+9269 total queue pushes
+Completing instantiation... [0.060s CPU, 0.076s wall-clock]
+Instantiating: [0.100s CPU, 0.115s wall-clock]
+Computing fact groups...
+Finding invariants...
+16 initial candidates
+Finding invariants: [0.020s CPU, 0.006s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.010s CPU, 0.005s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.002s wall-clock]
+Choosing groups...
+33 uncovered facts
+Choosing groups: [0.000s CPU, 0.002s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.030s CPU, 0.018s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.005s wall-clock]
+Translating task: [0.100s CPU, 0.098s wall-clock]
+2610 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+50 propositions removed
+Detecting unreachable propositions: [0.050s CPU, 0.045s wall-clock]
+Reordering and filtering variables...
+56 of 56 variables necessary.
+39 of 56 mutex groups necessary.
+1812 of 1812 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.020s CPU, 0.023s wall-clock]
+Translator variables: 56
+Translator derived variables: 0
+Translator facts: 489
+Translator goal facts: 13
+Translator mutex groups: 39
+Translator total mutex groups size: 564
+Translator operators: 1812
+Translator axioms: 0
+Translator task size: 17538
+Translator peak memory: 50544 KB
+Writing output... [0.020s CPU, 0.021s wall-clock]
+Done! [0.320s CPU, 0.329s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: 1799.59s
+INFO     search memory limit: 8192 MB
+INFO     search command line string: /src/fd/builds/release/bin/downward --search 'astar(cea())' --internal-plan-file plan.txt < output.sas
+[t=1.8355e-05s, 55864 KB] reading input...
+[t=0.00767268s, 56960 KB] done reading input!
+[t=0.00842986s, 57224 KB] Initializing context-enhanced additive heuristic...
+[t=0.0203294s, 58944 KB] Building successor generator...done!
+[t=0.0210447s, 59120 KB] peak memory difference for successor generator creation: 176 KB
+[t=0.0210818s, 59120 KB] time for successor generation creation: 0.000545713s
+[t=0.0211338s, 59120 KB] Variables: 56
+[t=0.0211818s, 59120 KB] FactPairs: 489
+[t=0.0212261s, 59120 KB] Bytes per state: 20
+[t=0.0213581s, 59120 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.0220948s, 59460 KB] New best heuristic value for cea: 89
+[t=0.0221438s, 59460 KB] g=0, 1 evaluated, 0 expanded
+[t=0.0221894s, 59460 KB] f = 89, 1 evaluated, 0 expanded
+[t=0.022238s, 59460 KB] Initial heuristic value for cea: 89
+[t=0.0222846s, 59460 KB] pruning method: none
+[t=0.0226332s, 59460 KB] New best heuristic value for cea: 88
+[t=0.0226799s, 59460 KB] g=1, 2 evaluated, 1 expanded
+[t=0.0229724s, 59460 KB] New best heuristic value for cea: 86
+[t=0.0230177s, 59460 KB] g=1, 3 evaluated, 1 expanded
+[t=0.0352597s, 60256 KB] f = 90, 39 evaluated, 5 expanded
+[t=0.0400101s, 60256 KB] f = 91, 51 evaluated, 7 expanded
+[t=0.042246s, 60256 KB] f = 92, 57 evaluated, 8 expanded
+[t=0.0425843s, 60256 KB] New best heuristic value for cea: 84
+[t=0.0426327s, 60256 KB] g=3, 58 evaluated, 9 expanded
+[t=0.0613621s, 60388 KB] f = 93, 114 evaluated, 22 expanded, 4 reopened
+[t=0.0635679s, 60388 KB] f = 94, 120 evaluated, 23 expanded, 4 reopened
+[t=0.0670997s, 60520 KB] New best heuristic value for cea: 83
+[t=0.0671494s, 60520 KB] g=5, 130 evaluated, 25 expanded, 4 reopened
+[t=0.170401s, 60784 KB] f = 95, 429 evaluated, 79 expanded, 12 reopened
+[t=0.227034s, 60916 KB] f = 96, 594 evaluated, 119 expanded, 23 reopened
+[t=0.452422s, 61188 KB] f = 97, 1283 evaluated, 266 expanded, 66 reopened
+[t=0.576197s, 61188 KB] New best heuristic value for cea: 82
+[t=0.576282s, 61188 KB] g=5, 1652 evaluated, 324 expanded, 66 reopened
+[t=0.61094s, 61452 KB] New best heuristic value for cea: 77
+[t=0.611032s, 61452 KB] g=7, 1755 evaluated, 339 expanded, 66 reopened
+[t=0.636661s, 61584 KB] New best heuristic value for cea: 73
+[t=0.636745s, 61584 KB] g=9, 1830 evaluated, 348 expanded, 66 reopened
+[t=0.643708s, 61716 KB] New best heuristic value for cea: 72
+[t=0.643758s, 61716 KB] g=11, 1852 evaluated, 350 expanded, 66 reopened
+[t=0.657647s, 61716 KB] New best heuristic value for cea: 71
+[t=0.65773s, 61716 KB] g=13, 1893 evaluated, 354 expanded, 66 reopened
+[t=0.715344s, 62112 KB] New best heuristic value for cea: 69
+[t=0.715441s, 62112 KB] g=13, 2066 evaluated, 377 expanded, 70 reopened
+[t=0.722326s, 62112 KB] New best heuristic value for cea: 68
+[t=0.722405s, 62112 KB] g=15, 2087 evaluated, 379 expanded, 70 reopened
+[t=0.743729s, 62244 KB] New best heuristic value for cea: 67
+[t=0.74382s, 62244 KB] g=17, 2151 evaluated, 386 expanded, 70 reopened
+[t=0.913036s, 62640 KB] New best heuristic value for cea: 66
+[t=0.913155s, 62640 KB] g=20, 2657 evaluated, 444 expanded, 70 reopened
+[t=1.42919s, 62904 KB] New best heuristic value for cea: 65
+[t=1.42928s, 62904 KB] g=22, 4248 evaluated, 647 expanded, 89 reopened
+[t=1.80467s, 63036 KB] New best heuristic value for cea: 64
+[t=1.80476s, 63036 KB] g=20, 5386 evaluated, 829 expanded, 121 reopened
+[t=1.85243s, 63168 KB] New best heuristic value for cea: 63
+[t=1.85253s, 63168 KB] g=23, 5530 evaluated, 844 expanded, 121 reopened
+[t=1.85531s, 63168 KB] New best heuristic value for cea: 62
+[t=1.85536s, 63168 KB] g=24, 5539 evaluated, 845 expanded, 121 reopened
+[t=1.85567s, 63168 KB] New best heuristic value for cea: 61
+[t=1.85572s, 63168 KB] g=24, 5540 evaluated, 845 expanded, 121 reopened
+[t=1.89152s, 63168 KB] New best heuristic value for cea: 60
+[t=1.89163s, 63168 KB] g=26, 5651 evaluated, 857 expanded, 121 reopened
+[t=1.93674s, 63168 KB] New best heuristic value for cea: 57
+[t=1.93683s, 63168 KB] g=26, 5789 evaluated, 876 expanded, 123 reopened
+[t=1.96003s, 63292 KB] New best heuristic value for cea: 56
+[t=1.96011s, 63292 KB] g=30, 5863 evaluated, 885 expanded, 123 reopened
+[t=2.03329s, 63424 KB] New best heuristic value for cea: 54
+[t=2.03341s, 63424 KB] g=33, 6086 evaluated, 911 expanded, 123 reopened
+[t=2.80295s, 63820 KB] New best heuristic value for cea: 51
+[t=2.80304s, 63820 KB] g=35, 8475 evaluated, 1203 expanded, 129 reopened
+[t=2.8257s, 63952 KB] New best heuristic value for cea: 50
+[t=2.82579s, 63952 KB] g=39, 8547 evaluated, 1211 expanded, 129 reopened
+[t=2.83251s, 63952 KB] New best heuristic value for cea: 48
+[t=2.83256s, 63952 KB] g=40, 8566 evaluated, 1212 expanded, 129 reopened
+Peak memory: 384668 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+Remove intermediate file output.sas
+search exit code: 23
+
+Driver aborting after search
+-----------PLAN-----------
+
+cat: plan.txt: No such file or directory

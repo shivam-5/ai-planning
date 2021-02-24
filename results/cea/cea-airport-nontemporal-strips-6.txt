@@ -1,0 +1,274 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 1799.97s
+INFO     translator memory limit: 8192 MB
+INFO     translator command line string: /usr/bin/python3 /src/fd/builds/release/bin/translate/translate.py pddl-instances/ipc-2004/domains/airport-nontemporal-strips/domains/domain-6.pddl pddl-instances/ipc-2004/domains/airport-nontemporal-strips/instances/instance-6.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.020s CPU, 0.024s wall-clock]
+Normalizing task... [0.000s CPU, 0.003s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.003s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.020s CPU, 0.017s wall-clock]
+Preparing model... [0.010s CPU, 0.011s wall-clock]
+Generated 1099 rules.
+Computing model... [0.010s CPU, 0.010s wall-clock]
+633 relevant atoms
+975 auxiliary atoms
+1608 final queue length
+2104 total queue pushes
+Completing instantiation... [0.010s CPU, 0.010s wall-clock]
+Instantiating: [0.050s CPU, 0.052s wall-clock]
+Computing fact groups...
+Finding invariants...
+26 initial candidates
+Finding invariants: [0.050s CPU, 0.045s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.002s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+231 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.050s CPU, 0.051s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.010s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.010s CPU, 0.013s wall-clock]
+506 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+23 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.008s wall-clock]
+Reordering and filtering variables...
+114 of 228 variables necessary.
+38 of 47 mutex groups necessary.
+171 of 171 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.009s wall-clock]
+Translator variables: 114
+Translator derived variables: 0
+Translator facts: 305
+Translator goal facts: 2
+Translator mutex groups: 38
+Translator total mutex groups size: 115
+Translator operators: 171
+Translator axioms: 0
+Translator task size: 2219
+Translator peak memory: 43000 KB
+Writing output... [0.000s CPU, 0.003s wall-clock]
+Done! [0.160s CPU, 0.164s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: 1799.76s
+INFO     search memory limit: 8192 MB
+INFO     search command line string: /src/fd/builds/release/bin/downward --search 'astar(cea())' --internal-plan-file plan.txt < output.sas
+[t=1.8565e-05s, 55864 KB] reading input...
+[t=0.0012058s, 55996 KB] done reading input!
+[t=0.00190176s, 56260 KB] Initializing context-enhanced additive heuristic...
+[t=0.00348282s, 56524 KB] Building successor generator...done!
+[t=0.00369523s, 56524 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.00373076s, 56524 KB] time for successor generation creation: 0.000103334s
+[t=0.00378097s, 56524 KB] Variables: 114
+[t=0.00382705s, 56524 KB] FactPairs: 305
+[t=0.00389267s, 56524 KB] Bytes per state: 16
+[t=0.0039875s, 56524 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.00410016s, 56524 KB] New best heuristic value for cea: 43
+[t=0.00414788s, 56524 KB] g=0, 1 evaluated, 0 expanded
+[t=0.0041944s, 56524 KB] f = 43, 1 evaluated, 0 expanded
+[t=0.00424378s, 56524 KB] Initial heuristic value for cea: 43
+[t=0.0042954s, 56524 KB] pruning method: none
+[t=0.00437773s, 56524 KB] New best heuristic value for cea: 41
+[t=0.00442271s, 56524 KB] g=1, 2 evaluated, 1 expanded
+[t=0.00453662s, 56524 KB] New best heuristic value for cea: 39
+[t=0.00458192s, 56524 KB] g=2, 6 evaluated, 2 expanded
+[t=0.00466376s, 56524 KB] New best heuristic value for cea: 38
+[t=0.00469783s, 56524 KB] g=3, 10 evaluated, 3 expanded
+[t=0.00479337s, 56524 KB] New best heuristic value for cea: 37
+[t=0.00483842s, 56524 KB] g=4, 14 evaluated, 4 expanded
+[t=0.00495066s, 56524 KB] New best heuristic value for cea: 36
+[t=0.00499692s, 56524 KB] g=5, 18 evaluated, 5 expanded
+[t=0.0050892s, 56524 KB] New best heuristic value for cea: 35
+[t=0.00513371s, 56524 KB] g=6, 22 evaluated, 6 expanded
+[t=0.00520717s, 56524 KB] New best heuristic value for cea: 34
+[t=0.00524222s, 56524 KB] g=7, 26 evaluated, 7 expanded
+[t=0.00531373s, 56524 KB] New best heuristic value for cea: 33
+[t=0.00534879s, 56524 KB] g=8, 30 evaluated, 8 expanded
+[t=0.00542053s, 56524 KB] New best heuristic value for cea: 32
+[t=0.00545657s, 56524 KB] g=9, 34 evaluated, 9 expanded
+[t=0.00556242s, 56524 KB] New best heuristic value for cea: 31
+[t=0.0056099s, 56524 KB] g=10, 38 evaluated, 10 expanded
+[t=0.00569948s, 56524 KB] New best heuristic value for cea: 30
+[t=0.00574713s, 56524 KB] g=11, 42 evaluated, 11 expanded
+[t=0.00593259s, 56524 KB] New best heuristic value for cea: 29
+[t=0.00597953s, 56524 KB] g=13, 55 evaluated, 14 expanded
+[t=0.00608454s, 56524 KB] New best heuristic value for cea: 28
+[t=0.00613146s, 56524 KB] g=14, 59 evaluated, 15 expanded
+[t=0.0071827s, 56656 KB] f = 44, 161 evaluated, 69 expanded
+[t=0.00736395s, 56656 KB] f = 45, 173 evaluated, 76 expanded
+[t=0.00749331s, 56656 KB] New best heuristic value for cea: 27
+[t=0.0075392s, 56656 KB] g=18, 178 evaluated, 79 expanded
+[t=0.00761415s, 56656 KB] New best heuristic value for cea: 26
+[t=0.00766081s, 56656 KB] g=19, 179 evaluated, 80 expanded
+[t=0.00772609s, 56656 KB] New best heuristic value for cea: 24
+[t=0.00776214s, 56656 KB] g=20, 181 evaluated, 81 expanded
+[t=0.00784348s, 56656 KB] New best heuristic value for cea: 20
+[t=0.00790826s, 56656 KB] g=21, 183 evaluated, 82 expanded
+[t=0.00798097s, 56788 KB] New best heuristic value for cea: 19
+[t=0.00803371s, 56788 KB] g=22, 184 evaluated, 83 expanded
+[t=0.00811201s, 56788 KB] New best heuristic value for cea: 18
+[t=0.00815815s, 56788 KB] g=23, 186 evaluated, 84 expanded
+[t=0.00823267s, 56788 KB] New best heuristic value for cea: 17
+[t=0.00828s, 56788 KB] g=24, 188 evaluated, 85 expanded
+[t=0.00833379s, 56788 KB] New best heuristic value for cea: 16
+[t=0.00837018s, 56788 KB] g=25, 190 evaluated, 86 expanded
+[t=0.00844225s, 56788 KB] New best heuristic value for cea: 15
+[t=0.00848928s, 56788 KB] g=26, 192 evaluated, 87 expanded
+[t=0.00856966s, 56788 KB] New best heuristic value for cea: 14
+[t=0.00862103s, 56788 KB] g=27, 194 evaluated, 88 expanded
+[t=0.00868406s, 56788 KB] New best heuristic value for cea: 13
+[t=0.00872373s, 56788 KB] g=28, 196 evaluated, 89 expanded
+[t=0.0088013s, 56788 KB] New best heuristic value for cea: 12
+[t=0.00885573s, 56788 KB] g=29, 198 evaluated, 90 expanded
+[t=0.00894593s, 56916 KB] New best heuristic value for cea: 11
+[t=0.00901547s, 56916 KB] g=30, 200 evaluated, 91 expanded
+[t=0.00906954s, 56916 KB] New best heuristic value for cea: 10
+[t=0.00910675s, 56916 KB] g=31, 202 evaluated, 92 expanded
+[t=0.00920199s, 56916 KB] New best heuristic value for cea: 9
+[t=0.00925461s, 56916 KB] g=32, 205 evaluated, 93 expanded
+[t=0.00934568s, 56916 KB] New best heuristic value for cea: 8
+[t=0.00940154s, 56916 KB] g=33, 208 evaluated, 94 expanded
+[t=0.00950191s, 56916 KB] New best heuristic value for cea: 7
+[t=0.00955837s, 56916 KB] g=34, 211 evaluated, 95 expanded
+[t=0.0096387s, 56916 KB] New best heuristic value for cea: 6
+[t=0.00968445s, 56916 KB] g=35, 214 evaluated, 96 expanded
+[t=0.00975487s, 56916 KB] New best heuristic value for cea: 5
+[t=0.00981284s, 56916 KB] g=36, 217 evaluated, 97 expanded
+[t=0.00991352s, 56916 KB] New best heuristic value for cea: 4
+[t=0.00997374s, 56916 KB] g=37, 220 evaluated, 98 expanded
+[t=0.0100818s, 57040 KB] New best heuristic value for cea: 3
+[t=0.0101298s, 57040 KB] g=38, 223 evaluated, 99 expanded
+[t=0.0102025s, 57040 KB] New best heuristic value for cea: 2
+[t=0.010239s, 57040 KB] g=39, 227 evaluated, 100 expanded
+[t=0.0103093s, 57040 KB] New best heuristic value for cea: 1
+[t=0.0103567s, 57040 KB] g=40, 230 evaluated, 101 expanded
+[t=0.010423s, 57040 KB] New best heuristic value for cea: 0
+[t=0.0104709s, 57040 KB] g=41, 233 evaluated, 102 expanded
+[t=0.0105287s, 57040 KB] Solution found!
+[t=0.0105758s, 57040 KB] Actual search time: 0.00625762s
+move_seg_rwy_0_1300_seg_27_0_150_south_south_medium airplane_cfbeg (1)
+move_seg_27_0_150_seg_b_27_0_100_south_north_medium airplane_cfbeg (1)
+move_seg_b_27_0_100_seg_n6_b_0_100_north_north_medium airplane_cfbeg (1)
+move_seg_n6_b_0_100_seg_n5_n6_0_100_north_north_medium airplane_cfbeg (1)
+move_seg_n5_n6_0_100_seg_n4_n5_0_86_north_north_medium airplane_cfbeg (1)
+move_seg_n4_n5_0_86_seg_n4_n5_6_0_86_north_north_medium airplane_cfbeg (1)
+move_seg_n4_n5_6_0_86_seg_n4_n5_5_0_86_north_north_medium airplane_cfbeg (1)
+move_seg_n4_n5_5_0_86_seg_n4_n5_4_0_85_north_north_medium airplane_cfbeg (1)
+move_seg_n4_n5_4_0_85_seg_n4_n5_3_0_86_north_north_medium airplane_cfbeg (1)
+move_seg_n4_n5_3_0_86_seg_n4_n5_2_0_86_north_north_medium airplane_cfbeg (1)
+move_seg_n4_n5_2_0_86_seg_n4_n5_1_0_85_north_north_medium airplane_cfbeg (1)
+pushback_seg_b02_0_100_seg_c5_c_b02_0_100_south_south_medium airplane_dfboy (1)
+pushback_seg_c5_c_b02_0_100_seg_c5_c6_0_50_south_north_medium airplane_dfboy (1)
+startup_seg_c5_c6_0_50_north_medium airplane_dfboy (1)
+move_seg_c5_c6_0_50_seg_c4_c5_0_50_north_north_medium airplane_dfboy (1)
+move_seg_c4_c5_0_50_seg_c_c2_0_84_north_north_medium airplane_dfboy (1)
+move_seg_c_c2_0_84_seg_c_c2_2_0_83_north_north_medium airplane_dfboy (1)
+move_seg_c_c2_2_0_83_seg_c_c2_1_0_83_north_north_medium airplane_dfboy (1)
+move_seg_c_c2_1_0_83_seg_n_c_0_100_north_north_medium airplane_dfboy (1)
+move_seg_n_c_0_100_seg_n3_n_0_100_north_north_medium airplane_dfboy (1)
+move_seg_n3_n_0_100_seg_n2_n3_0_85_north_north_medium airplane_dfboy (1)
+move_seg_n2_n3_0_85_seg_n2_n3_6_0_86_north_north_medium airplane_dfboy (1)
+move_seg_n2_n3_6_0_86_seg_n2_n3_5_0_86_north_north_medium airplane_dfboy (1)
+move_seg_n2_n3_5_0_86_seg_n2_n3_4_0_85_north_north_medium airplane_dfboy (1)
+move_seg_n2_n3_4_0_85_seg_n2_n3_3_0_86_north_north_medium airplane_dfboy (1)
+move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_dfboy (1)
+move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_dfboy (1)
+move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_dfboy (1)
+move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_dfboy (1)
+move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_dfboy (1)
+move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_dfboy (1)
+move_seg_n4_n5_1_0_85_seg_n_n4_0_100_north_north_medium airplane_cfbeg (1)
+move_seg_n_n4_0_100_seg_n_c_0_100_north_south_medium airplane_cfbeg (1)
+move_seg_n_c_0_100_seg_c_c2_1_0_83_south_south_medium airplane_cfbeg (1)
+move_seg_c_c2_1_0_83_seg_c_c2_2_0_83_south_south_medium airplane_cfbeg (1)
+move_seg_c_c2_2_0_83_seg_c_c2_0_84_south_south_medium airplane_cfbeg (1)
+move_seg_c_c2_0_84_seg_c4_c5_0_50_south_south_medium airplane_cfbeg (1)
+move_seg_c4_c5_0_50_seg_c5_c_a02_0_100_south_south_medium airplane_cfbeg (1)
+move_seg_c5_c_a02_0_100_seg_a02_0_100_south_south_medium airplane_cfbeg (1)
+park_seg_a02_0_100_south airplane_cfbeg (1)
+takeoff_seg_09_0_150_south airplane_dfboy (1)
+[t=0.0106064s, 57040 KB] Plan length: 41 step(s).
+[t=0.0106064s, 57040 KB] Plan cost: 41
+[t=0.0106064s, 57040 KB] Expanded 103 state(s).
+[t=0.0106064s, 57040 KB] Reopened 0 state(s).
+[t=0.0106064s, 57040 KB] Evaluated 233 state(s).
+[t=0.0106064s, 57040 KB] Evaluations: 233
+[t=0.0106064s, 57040 KB] Generated 303 state(s).
+[t=0.0106064s, 57040 KB] Dead ends: 79 state(s).
+[t=0.0106064s, 57040 KB] Expanded until last jump: 76 state(s).
+[t=0.0106064s, 57040 KB] Reopened until last jump: 0 state(s).
+[t=0.0106064s, 57040 KB] Evaluated until last jump: 173 state(s).
+[t=0.0106064s, 57040 KB] Generated until last jump: 242 state(s).
+[t=0.0106064s, 57040 KB] Number of registered states: 233
+[t=0.0106064s, 57040 KB] Int hash set load factor: 233/256 = 0.910156
+[t=0.0106064s, 57040 KB] Int hash set resizes: 8
+[t=0.0106064s, 57040 KB] Search time: 0.00662036s
+[t=0.0106064s, 57040 KB] Total time: 0.0106064s
+Solution found.
+Peak memory: 57040 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+-----------PLAN-----------
+
+(move_seg_rwy_0_1300_seg_27_0_150_south_south_medium airplane_cfbeg)
+(move_seg_27_0_150_seg_b_27_0_100_south_north_medium airplane_cfbeg)
+(move_seg_b_27_0_100_seg_n6_b_0_100_north_north_medium airplane_cfbeg)
+(move_seg_n6_b_0_100_seg_n5_n6_0_100_north_north_medium airplane_cfbeg)
+(move_seg_n5_n6_0_100_seg_n4_n5_0_86_north_north_medium airplane_cfbeg)
+(move_seg_n4_n5_0_86_seg_n4_n5_6_0_86_north_north_medium airplane_cfbeg)
+(move_seg_n4_n5_6_0_86_seg_n4_n5_5_0_86_north_north_medium airplane_cfbeg)
+(move_seg_n4_n5_5_0_86_seg_n4_n5_4_0_85_north_north_medium airplane_cfbeg)
+(move_seg_n4_n5_4_0_85_seg_n4_n5_3_0_86_north_north_medium airplane_cfbeg)
+(move_seg_n4_n5_3_0_86_seg_n4_n5_2_0_86_north_north_medium airplane_cfbeg)
+(move_seg_n4_n5_2_0_86_seg_n4_n5_1_0_85_north_north_medium airplane_cfbeg)
+(pushback_seg_b02_0_100_seg_c5_c_b02_0_100_south_south_medium airplane_dfboy)
+(pushback_seg_c5_c_b02_0_100_seg_c5_c6_0_50_south_north_medium airplane_dfboy)
+(startup_seg_c5_c6_0_50_north_medium airplane_dfboy)
+(move_seg_c5_c6_0_50_seg_c4_c5_0_50_north_north_medium airplane_dfboy)
+(move_seg_c4_c5_0_50_seg_c_c2_0_84_north_north_medium airplane_dfboy)
+(move_seg_c_c2_0_84_seg_c_c2_2_0_83_north_north_medium airplane_dfboy)
+(move_seg_c_c2_2_0_83_seg_c_c2_1_0_83_north_north_medium airplane_dfboy)
+(move_seg_c_c2_1_0_83_seg_n_c_0_100_north_north_medium airplane_dfboy)
+(move_seg_n_c_0_100_seg_n3_n_0_100_north_north_medium airplane_dfboy)
+(move_seg_n3_n_0_100_seg_n2_n3_0_85_north_north_medium airplane_dfboy)
+(move_seg_n2_n3_0_85_seg_n2_n3_6_0_86_north_north_medium airplane_dfboy)
+(move_seg_n2_n3_6_0_86_seg_n2_n3_5_0_86_north_north_medium airplane_dfboy)
+(move_seg_n2_n3_5_0_86_seg_n2_n3_4_0_85_north_north_medium airplane_dfboy)
+(move_seg_n2_n3_4_0_85_seg_n2_n3_3_0_86_north_north_medium airplane_dfboy)
+(move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_dfboy)
+(move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_dfboy)
+(move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_dfboy)
+(move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_dfboy)
+(move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_dfboy)
+(move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_dfboy)
+(move_seg_n4_n5_1_0_85_seg_n_n4_0_100_north_north_medium airplane_cfbeg)
+(move_seg_n_n4_0_100_seg_n_c_0_100_north_south_medium airplane_cfbeg)
+(move_seg_n_c_0_100_seg_c_c2_1_0_83_south_south_medium airplane_cfbeg)
+(move_seg_c_c2_1_0_83_seg_c_c2_2_0_83_south_south_medium airplane_cfbeg)
+(move_seg_c_c2_2_0_83_seg_c_c2_0_84_south_south_medium airplane_cfbeg)
+(move_seg_c_c2_0_84_seg_c4_c5_0_50_south_south_medium airplane_cfbeg)
+(move_seg_c4_c5_0_50_seg_c5_c_a02_0_100_south_south_medium airplane_cfbeg)
+(move_seg_c5_c_a02_0_100_seg_a02_0_100_south_south_medium airplane_cfbeg)
+(park_seg_a02_0_100_south airplane_cfbeg)
+(takeoff_seg_09_0_150_south airplane_dfboy)
+; cost = 41 (unit cost)

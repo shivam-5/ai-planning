@@ -1,0 +1,254 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 1799.97s
+INFO     translator memory limit: 8192 MB
+INFO     translator command line string: /usr/bin/python3 /src/fd/builds/release/bin/translate/translate.py pddl-instances/ipc-2006/domains/pipesworld-propositional-strips/domains/domain-18.pddl pddl-instances/ipc-2006/domains/pipesworld-propositional-strips/instances/instance-18.pddl --sas-file output.sas
+Parsing...
+Parsing: [1.400s CPU, 1.405s wall-clock]
+Normalizing task... [0.370s CPU, 0.363s wall-clock]
+Instantiating...
+Generating Datalog program... [0.200s CPU, 0.206s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.350s CPU, 0.344s wall-clock]
+Preparing model... [0.410s CPU, 0.418s wall-clock]
+Generated 34271 rules.
+Computing model... [0.120s CPU, 0.117s wall-clock]
+7241 relevant atoms
+0 auxiliary atoms
+7241 final queue length
+34321 total queue pushes
+Completing instantiation... [0.510s CPU, 0.513s wall-clock]
+Instantiating: [1.620s CPU, 1.622s wall-clock]
+Computing fact groups...
+Finding invariants...
+386 initial candidates
+Finding invariants: [38.990s CPU, 38.977s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+318 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [38.990s CPU, 38.981s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.019s wall-clock]
+Translating task: [0.470s CPU, 0.480s wall-clock]
+13178 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+32 propositions removed
+Detecting unreachable propositions: [0.320s CPU, 0.304s wall-clock]
+Reordering and filtering variables...
+350 of 350 variables necessary.
+2 of 34 mutex groups necessary.
+6854 of 6854 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.120s CPU, 0.122s wall-clock]
+Translator variables: 350
+Translator derived variables: 0
+Translator facts: 704
+Translator goal facts: 9
+Translator mutex groups: 2
+Translator total mutex groups size: 4
+Translator operators: 6854
+Translator axioms: 0
+Translator task size: 75401
+Translator peak memory: 303856 KB
+Writing output... [0.090s CPU, 0.090s wall-clock]
+Done! [43.390s CPU, 43.387s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: 1756.52s
+INFO     search memory limit: 8192 MB
+INFO     search command line string: /src/fd/builds/release/bin/downward --search 'astar(cea())' --internal-plan-file plan.txt < output.sas
+[t=0.000121577s, 55864 KB] reading input...
+[t=0.0301575s, 58752 KB] done reading input!
+[t=0.0310332s, 59144 KB] Initializing context-enhanced additive heuristic...
+[t=0.10028s, 65908 KB] Building successor generator...done!
+[t=0.103397s, 66604 KB] peak memory difference for successor generator creation: 696 KB
+[t=0.103438s, 66604 KB] time for successor generation creation: 0.00294702s
+[t=0.103499s, 66604 KB] Variables: 350
+[t=0.103535s, 66604 KB] FactPairs: 704
+[t=0.10358s, 66604 KB] Bytes per state: 48
+[t=0.103706s, 66604 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.106588s, 69348 KB] New best heuristic value for cea: 59
+[t=0.106639s, 69348 KB] g=0, 1 evaluated, 0 expanded
+[t=0.106685s, 69348 KB] f = 59, 1 evaluated, 0 expanded
+[t=0.106734s, 69348 KB] Initial heuristic value for cea: 59
+[t=0.106782s, 69348 KB] pruning method: none
+[t=0.1222s, 69748 KB] New best heuristic value for cea: 58
+[t=0.122289s, 69748 KB] g=1, 13 evaluated, 1 expanded
+[t=0.132682s, 70540 KB] New best heuristic value for cea: 47
+[t=0.132748s, 70540 KB] g=2, 21 evaluated, 2 expanded
+[t=0.293594s, 70832 KB] New best heuristic value for cea: 46
+[t=0.293691s, 70832 KB] g=4, 149 evaluated, 11 expanded
+[t=0.348274s, 70832 KB] New best heuristic value for cea: 44
+[t=0.34837s, 70832 KB] g=6, 194 evaluated, 15 expanded
+[t=0.486021s, 70832 KB] New best heuristic value for cea: 42
+[t=0.486111s, 70832 KB] g=8, 307 evaluated, 22 expanded
+[t=27.7724s, 72752 KB] New best heuristic value for cea: 40
+[t=27.7725s, 72752 KB] g=9, 22769 evaluated, 2412 expanded
+[t=27.7847s, 72752 KB] New best heuristic value for cea: 39
+[t=27.7848s, 72752 KB] g=10, 22779 evaluated, 2413 expanded
+[t=27.8351s, 72884 KB] New best heuristic value for cea: 37
+[t=27.8352s, 72884 KB] g=12, 22819 evaluated, 2416 expanded
+[t=28.1046s, 72884 KB] New best heuristic value for cea: 36
+[t=28.1047s, 72884 KB] g=12, 23040 evaluated, 2435 expanded
+[t=29.7093s, 72884 KB] New best heuristic value for cea: 34
+[t=29.7094s, 72884 KB] g=16, 24348 evaluated, 2544 expanded
+[t=57.6994s, 74868 KB] New best heuristic value for cea: 31
+[t=57.6995s, 74868 KB] g=14, 47963 evaluated, 4486 expanded, 26 reopened
+[t=57.7185s, 74868 KB] New best heuristic value for cea: 30
+[t=57.7186s, 74868 KB] g=15, 47980 evaluated, 4487 expanded, 26 reopened
+[t=57.967s, 74868 KB] New best heuristic value for cea: 29
+[t=57.9671s, 74868 KB] g=17, 48194 evaluated, 4509 expanded, 26 reopened
+[t=57.9776s, 74868 KB] New best heuristic value for cea: 27
+[t=57.9776s, 74868 KB] g=18, 48202 evaluated, 4510 expanded, 26 reopened
+[t=58.0145s, 75000 KB] New best heuristic value for cea: 20
+[t=58.0146s, 75000 KB] g=20, 48232 evaluated, 4513 expanded, 26 reopened
+[t=58.1068s, 75000 KB] New best heuristic value for cea: 19
+[t=58.1069s, 75000 KB] g=23, 48313 evaluated, 4517 expanded, 26 reopened
+[t=64.7004s, 75400 KB] New best heuristic value for cea: 16
+[t=64.7005s, 75400 KB] g=23, 53733 evaluated, 4958 expanded, 26 reopened
+[t=64.7072s, 75400 KB] New best heuristic value for cea: 14
+[t=64.7073s, 75400 KB] g=24, 53737 evaluated, 4959 expanded, 26 reopened
+[t=64.7111s, 75400 KB] New best heuristic value for cea: 12
+[t=64.7112s, 75400 KB] g=24, 53740 evaluated, 4959 expanded, 26 reopened
+[t=65.0016s, 75400 KB] New best heuristic value for cea: 10
+[t=65.0017s, 75400 KB] g=28, 53994 evaluated, 4982 expanded, 26 reopened
+[t=411.987s, 100628 KB] New best heuristic value for cea: 8
+[t=411.987s, 100628 KB] g=29, 360680 evaluated, 37263 expanded, 26 reopened
+[t=411.99s, 100628 KB] New best heuristic value for cea: 7
+[t=411.99s, 100628 KB] g=30, 360683 evaluated, 37264 expanded, 26 reopened
+[t=412.014s, 100628 KB] New best heuristic value for cea: 6
+[t=412.014s, 100628 KB] g=32, 360705 evaluated, 37266 expanded, 26 reopened
+[t=412.613s, 100628 KB] New best heuristic value for cea: 5
+[t=412.613s, 100628 KB] g=34, 361245 evaluated, 37315 expanded, 26 reopened
+[t=413.753s, 100764 KB] New best heuristic value for cea: 3
+[t=413.753s, 100764 KB] g=37, 362336 evaluated, 37381 expanded, 26 reopened
+[t=414.48s, 100764 KB] New best heuristic value for cea: 2
+[t=414.48s, 100764 KB] g=38, 363043 evaluated, 37435 expanded, 26 reopened
+[t=536.191s, 114792 KB] New best heuristic value for cea: 0
+[t=536.191s, 114792 KB] g=42, 478094 evaluated, 49672 expanded, 26 reopened
+[t=536.195s, 114792 KB] Solution found!
+[t=536.195s, 114792 KB] Actual search time: 536.088s
+pop-start-s12-b14-a1-a2-b15-oca1-gasoleo-ta2-1-oca1  (1)
+pop-end-s12-a1-a2-b1-b15-rat-a-ta1-1-rat-a  (1)
+pop-start-s13-b11-a1-a3-b3-lco-oca1-ta3-1-lco  (1)
+pop-end-s13-a1-a3-b10-b3-oca1-ta1-1-oca1  (1)
+pop-start-s13-b5-a1-a3-b11-oc1b-lco-ta3-1-oc1b  (1)
+pop-end-s13-a1-a3-b3-b11-rat-a-ta1-2-rat-a  (1)
+pop-start-s13-b2-a1-a3-b5-lco-oc1b-ta3-2-lco  (1)
+pop-end-s13-a1-a3-b11-b5-oca1-ta1-2-oca1  (1)
+push-start-s13-b10-a1-a3-b5-oca1-oc1b-ta1-1-oca1  (1)
+push-end-s13-a1-a3-b2-b5-lco-ta3-1-lco  (1)
+push-start-s13-b3-a1-a3-b10-oca1-oca1-ta1-2-oca1  (1)
+push-end-s13-a1-a3-b5-b10-oc1b-ta3-1-oc1b  (1)
+pop-start-s12-b13-a1-a2-b14-gasoleo-oca1-ta2-1-gasoleo  (1)
+pop-end-s12-a1-a2-b15-b14-lco-ta1-2-lco  (1)
+push-start-s12-b0-a1-a2-b14-oc1b-oca1-ta1-1-oc1b  (1)
+push-end-s12-a1-a2-b13-b14-gasoleo-ta2-1-gasoleo  (1)
+push-start-s12-b11-a1-a2-b0-lco-oc1b-ta1-1-lco  (1)
+push-end-s12-a1-a2-b14-b0-oca1-ta2-1-oca1  (1)
+push-start-s12-b6-a1-a2-b11-lco-lco-ta1-2-lco  (1)
+push-end-s12-a1-a2-b0-b11-oc1b-ta2-2-oc1b  (1)
+push-start-s12-b1-a1-a2-b6-rat-a-lco-ta1-1-rat-a  (1)
+push-end-s12-a1-a2-b11-b6-lco-ta2-1-lco  (1)
+pop-start-s12-b14-a1-a2-b6-oca1-lco-ta2-1-oca1  (1)
+pop-end-s12-a1-a2-b1-b6-gasoleo-ta1-1-gasoleo  (1)
+pop-start-s12-b13-a1-a2-b14-gasoleo-oca1-ta2-1-gasoleo  (1)
+pop-end-s12-a1-a2-b6-b14-lco-ta1-1-lco  (1)
+pop-start-s12-b12-a1-a2-b13-rat-a-gasoleo-ta2-1-rat-a  (1)
+pop-end-s12-a1-a2-b14-b13-rat-a-ta1-1-rat-a  (1)
+push-start-s12-b6-a1-a2-b13-lco-gasoleo-ta1-1-lco  (1)
+push-end-s12-a1-a2-b12-b13-rat-a-ta2-1-rat-a  (1)
+push-start-s13-b15-a1-a3-b3-gasoleo-oca1-ta1-1-gasoleo  (1)
+push-end-s13-a1-a3-b10-b3-oca1-ta3-2-oca1  (1)
+pop-start-s13-b5-a1-a3-b3-oc1b-oca1-ta3-1-oc1b  (1)
+pop-end-s13-a1-a3-b15-b3-gasoleo-ta1-1-gasoleo  (1)
+pop-start-s13-b2-a1-a3-b5-lco-oc1b-ta3-1-lco  (1)
+pop-end-s13-a1-a3-b3-b5-oca1-ta1-1-oca1  (1)
+push-start-s12-b3-a1-a2-b6-oca1-lco-ta1-1-oca1  (1)
+push-end-s12-a1-a2-b13-b6-gasoleo-ta2-1-gasoleo  (1)
+pop-start-s13-b9-a1-a3-b2-oca1-lco-ta3-1-oca1  (1)
+pop-end-s13-a1-a3-b5-b2-oc1b-ta1-1-oc1b  (1)
+push-start-s12-b5-a1-a2-b3-oc1b-oca1-ta1-1-oc1b  (1)
+push-end-s12-a1-a2-b6-b3-lco-ta2-2-lco  (1)
+[t=536.195s, 114792 KB] Plan length: 42 step(s).
+[t=536.195s, 114792 KB] Plan cost: 42
+[t=536.195s, 114792 KB] Expanded 49673 state(s).
+[t=536.195s, 114792 KB] Reopened 26 state(s).
+[t=536.195s, 114792 KB] Evaluated 478098 state(s).
+[t=536.195s, 114792 KB] Evaluations: 478098
+[t=536.195s, 114792 KB] Generated 657370 state(s).
+[t=536.195s, 114792 KB] Dead ends: 1 state(s).
+[t=536.195s, 114792 KB] Expanded until last jump: 0 state(s).
+[t=536.195s, 114792 KB] Reopened until last jump: 0 state(s).
+[t=536.195s, 114792 KB] Evaluated until last jump: 1 state(s).
+[t=536.195s, 114792 KB] Generated until last jump: 0 state(s).
+[t=536.195s, 114792 KB] Number of registered states: 478098
+[t=536.195s, 114792 KB] Int hash set load factor: 478098/1048576 = 0.45595
+[t=536.195s, 114792 KB] Int hash set resizes: 20
+[t=536.195s, 114792 KB] Search time: 536.092s
+[t=536.195s, 114792 KB] Total time: 536.195s
+Solution found.
+Peak memory: 114792 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+-----------PLAN-----------
+
+(pop-start-s12-b14-a1-a2-b15-oca1-gasoleo-ta2-1-oca1 )
+(pop-end-s12-a1-a2-b1-b15-rat-a-ta1-1-rat-a )
+(pop-start-s13-b11-a1-a3-b3-lco-oca1-ta3-1-lco )
+(pop-end-s13-a1-a3-b10-b3-oca1-ta1-1-oca1 )
+(pop-start-s13-b5-a1-a3-b11-oc1b-lco-ta3-1-oc1b )
+(pop-end-s13-a1-a3-b3-b11-rat-a-ta1-2-rat-a )
+(pop-start-s13-b2-a1-a3-b5-lco-oc1b-ta3-2-lco )
+(pop-end-s13-a1-a3-b11-b5-oca1-ta1-2-oca1 )
+(push-start-s13-b10-a1-a3-b5-oca1-oc1b-ta1-1-oca1 )
+(push-end-s13-a1-a3-b2-b5-lco-ta3-1-lco )
+(push-start-s13-b3-a1-a3-b10-oca1-oca1-ta1-2-oca1 )
+(push-end-s13-a1-a3-b5-b10-oc1b-ta3-1-oc1b )
+(pop-start-s12-b13-a1-a2-b14-gasoleo-oca1-ta2-1-gasoleo )
+(pop-end-s12-a1-a2-b15-b14-lco-ta1-2-lco )
+(push-start-s12-b0-a1-a2-b14-oc1b-oca1-ta1-1-oc1b )
+(push-end-s12-a1-a2-b13-b14-gasoleo-ta2-1-gasoleo )
+(push-start-s12-b11-a1-a2-b0-lco-oc1b-ta1-1-lco )
+(push-end-s12-a1-a2-b14-b0-oca1-ta2-1-oca1 )
+(push-start-s12-b6-a1-a2-b11-lco-lco-ta1-2-lco )
+(push-end-s12-a1-a2-b0-b11-oc1b-ta2-2-oc1b )
+(push-start-s12-b1-a1-a2-b6-rat-a-lco-ta1-1-rat-a )
+(push-end-s12-a1-a2-b11-b6-lco-ta2-1-lco )
+(pop-start-s12-b14-a1-a2-b6-oca1-lco-ta2-1-oca1 )
+(pop-end-s12-a1-a2-b1-b6-gasoleo-ta1-1-gasoleo )
+(pop-start-s12-b13-a1-a2-b14-gasoleo-oca1-ta2-1-gasoleo )
+(pop-end-s12-a1-a2-b6-b14-lco-ta1-1-lco )
+(pop-start-s12-b12-a1-a2-b13-rat-a-gasoleo-ta2-1-rat-a )
+(pop-end-s12-a1-a2-b14-b13-rat-a-ta1-1-rat-a )
+(push-start-s12-b6-a1-a2-b13-lco-gasoleo-ta1-1-lco )
+(push-end-s12-a1-a2-b12-b13-rat-a-ta2-1-rat-a )
+(push-start-s13-b15-a1-a3-b3-gasoleo-oca1-ta1-1-gasoleo )
+(push-end-s13-a1-a3-b10-b3-oca1-ta3-2-oca1 )
+(pop-start-s13-b5-a1-a3-b3-oc1b-oca1-ta3-1-oc1b )
+(pop-end-s13-a1-a3-b15-b3-gasoleo-ta1-1-gasoleo )
+(pop-start-s13-b2-a1-a3-b5-lco-oc1b-ta3-1-lco )
+(pop-end-s13-a1-a3-b3-b5-oca1-ta1-1-oca1 )
+(push-start-s12-b3-a1-a2-b6-oca1-lco-ta1-1-oca1 )
+(push-end-s12-a1-a2-b13-b6-gasoleo-ta2-1-gasoleo )
+(pop-start-s13-b9-a1-a3-b2-oca1-lco-ta3-1-oca1 )
+(pop-end-s13-a1-a3-b5-b2-oc1b-ta1-1-oc1b )
+(push-start-s12-b5-a1-a2-b3-oc1b-oca1-ta1-1-oc1b )
+(push-end-s12-a1-a2-b6-b3-lco-ta2-2-lco )
+; cost = 42 (unit cost)

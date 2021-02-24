@@ -1,0 +1,130 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 1799.97s
+INFO     translator memory limit: 8192 MB
+INFO     translator command line string: /usr/bin/python3 /src/fd/builds/release/bin/translate/translate.py pddl-instances/ipc-2006/domains/pipesworld-propositional-strips/domains/domain-19.pddl pddl-instances/ipc-2006/domains/pipesworld-propositional-strips/instances/instance-19.pddl --sas-file output.sas
+Parsing...
+Parsing: [1.670s CPU, 1.667s wall-clock]
+Normalizing task... [0.510s CPU, 0.512s wall-clock]
+Instantiating...
+Generating Datalog program... [0.240s CPU, 0.243s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.410s CPU, 0.415s wall-clock]
+Preparing model... [0.510s CPU, 0.503s wall-clock]
+Generated 41211 rules.
+Computing model... [0.140s CPU, 0.138s wall-clock]
+8689 relevant atoms
+0 auxiliary atoms
+8689 final queue length
+41263 total queue pushes
+Completing instantiation... [0.620s CPU, 0.615s wall-clock]
+Instantiating: [1.940s CPU, 1.943s wall-clock]
+Computing fact groups...
+Finding invariants...
+446 initial candidates
+Finding invariants: [53.350s CPU, 53.358s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+378 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [53.360s CPU, 53.363s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.020s CPU, 0.022s wall-clock]
+Translating task: [0.470s CPU, 0.466s wall-clock]
+15890 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+32 propositions removed
+Detecting unreachable propositions: [0.230s CPU, 0.233s wall-clock]
+Reordering and filtering variables...
+410 of 410 variables necessary.
+2 of 34 mutex groups necessary.
+8242 of 8242 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.150s CPU, 0.152s wall-clock]
+Translator variables: 410
+Translator derived variables: 0
+Translator facts: 824
+Translator goal facts: 8
+Translator mutex groups: 2
+Translator total mutex groups size: 4
+Translator operators: 8242
+Translator axioms: 0
+Translator task size: 90720
+Translator peak memory: 313292 KB
+Writing output... [0.110s CPU, 0.109s wall-clock]
+Done! [58.460s CPU, 58.468s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: 1741.44s
+INFO     search memory limit: 8192 MB
+INFO     search command line string: /src/fd/builds/release/bin/downward --search 'astar(ff())' --internal-plan-file plan.txt < output.sas
+[t=0.000162466s, 55864 KB] reading input...
+[t=0.0370853s, 59412 KB] done reading input!
+[t=0.0412234s, 62628 KB] Simplifying 48264 unary operators... done! [48264 unary operators]
+[t=0.0834005s, 66984 KB] time to simplify: 0.0422429s
+[t=0.0845864s, 66984 KB] Initializing additive heuristic...
+[t=0.0846431s, 66984 KB] Initializing FF heuristic...
+[t=0.0847576s, 66984 KB] Building successor generator...done!
+[t=0.0881952s, 66984 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.0882332s, 66984 KB] time for successor generation creation: 0.00331505s
+[t=0.0883196s, 66984 KB] Variables: 410
+[t=0.0883706s, 66984 KB] FactPairs: 824
+[t=0.088421s, 66984 KB] Bytes per state: 52
+[t=0.0885514s, 66984 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.089373s, 66984 KB] New best heuristic value for ff: 29
+[t=0.0894246s, 66984 KB] g=0, 1 evaluated, 0 expanded
+[t=0.0894733s, 66984 KB] f = 29, 1 evaluated, 0 expanded
+[t=0.0895259s, 66984 KB] Initial heuristic value for ff: 29
+[t=0.0895768s, 66984 KB] pruning method: none
+[t=0.0916512s, 66984 KB] New best heuristic value for ff: 25
+[t=0.0917023s, 66984 KB] g=1, 4 evaluated, 1 expanded
+[t=0.125241s, 66984 KB] New best heuristic value for ff: 23
+[t=0.12531s, 66984 KB] g=3, 54 evaluated, 4 expanded
+[t=0.17789s, 66984 KB] New best heuristic value for ff: 21
+[t=0.177978s, 66984 KB] g=5, 135 evaluated, 10 expanded
+[t=0.220726s, 66984 KB] New best heuristic value for ff: 19
+[t=0.220824s, 66984 KB] g=7, 200 evaluated, 15 expanded
+[t=0.248418s, 66984 KB] New best heuristic value for ff: 17
+[t=0.24851s, 66984 KB] g=9, 243 evaluated, 18 expanded
+[t=0.274661s, 66984 KB] New best heuristic value for ff: 15
+[t=0.274753s, 66984 KB] g=11, 282 evaluated, 20 expanded
+[t=0.31091s, 66984 KB] New best heuristic value for ff: 13
+[t=0.310998s, 66984 KB] g=12, 336 evaluated, 22 expanded
+[t=0.319957s, 66984 KB] New best heuristic value for ff: 12
+[t=0.320025s, 66984 KB] g=13, 350 evaluated, 23 expanded
+[t=0.34645s, 66984 KB] New best heuristic value for ff: 11
+[t=0.346519s, 66984 KB] g=15, 389 evaluated, 25 expanded
+[t=0.358804s, 66984 KB] New best heuristic value for ff: 10
+[t=0.358883s, 66984 KB] g=16, 407 evaluated, 26 expanded
+[t=0.518186s, 66984 KB] New best heuristic value for ff: 9
+[t=0.518304s, 66984 KB] g=18, 644 evaluated, 38 expanded
+[t=0.52223s, 66984 KB] New best heuristic value for ff: 8
+[t=0.522282s, 66984 KB] g=19, 650 evaluated, 39 expanded
+[t=4.7483s, 66984 KB] New best heuristic value for ff: 7
+[t=4.74841s, 66984 KB] g=20, 7021 evaluated, 518 expanded
+[t=513.678s, 133300 KB] New best heuristic value for ff: 6
+[t=513.678s, 133300 KB] g=23, 828678 evaluated, 110842 expanded
+Peak memory: 311536 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+Remove intermediate file output.sas
+search exit code: 23
+
+Driver aborting after search
+-----------PLAN-----------
+
+cat: plan.txt: No such file or directory

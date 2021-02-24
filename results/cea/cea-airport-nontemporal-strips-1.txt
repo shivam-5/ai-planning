@@ -1,0 +1,148 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 1799.97s
+INFO     translator memory limit: 8192 MB
+INFO     translator command line string: /usr/bin/python3 /src/fd/builds/release/bin/translate/translate.py pddl-instances/ipc-2004/domains/airport-nontemporal-strips/domains/domain-1.pddl pddl-instances/ipc-2004/domains/airport-nontemporal-strips/instances/instance-1.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.008s wall-clock]
+Normalizing task... [0.010s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.007s wall-clock]
+Preparing model... [0.010s CPU, 0.003s wall-clock]
+Generated 360 rules.
+Computing model... [0.000s CPU, 0.002s wall-clock]
+170 relevant atoms
+141 auxiliary atoms
+311 final queue length
+364 total queue pushes
+Completing instantiation... [0.000s CPU, 0.001s wall-clock]
+Instantiating: [0.010s CPU, 0.015s wall-clock]
+Computing fact groups...
+Finding invariants...
+26 initial candidates
+Finding invariants: [0.020s CPU, 0.021s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+61 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.020s CPU, 0.023s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.002s wall-clock]
+73 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+17 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.001s wall-clock]
+Reordering and filtering variables...
+29 of 57 variables necessary.
+14 of 18 mutex groups necessary.
+19 of 19 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
+Translator variables: 29
+Translator derived variables: 0
+Translator facts: 72
+Translator goal facts: 1
+Translator mutex groups: 14
+Translator total mutex groups size: 29
+Translator operators: 19
+Translator axioms: 0
+Translator task size: 337
+Translator peak memory: 39988 KB
+Writing output... [0.000s CPU, 0.001s wall-clock]
+Done! [0.050s CPU, 0.053s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: 1799.86s
+INFO     search memory limit: 8192 MB
+INFO     search command line string: /src/fd/builds/release/bin/downward --search 'astar(cea())' --internal-plan-file plan.txt < output.sas
+[t=0.000153798s, 55864 KB] reading input...
+[t=0.000497841s, 55864 KB] done reading input!
+[t=0.00130871s, 56128 KB] Initializing context-enhanced additive heuristic...
+[t=0.00168447s, 56128 KB] Building successor generator...done!
+[t=0.00181572s, 56128 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.00185194s, 56128 KB] time for successor generation creation: 1.8144e-05s
+[t=0.00190107s, 56128 KB] Variables: 29
+[t=0.00194542s, 56128 KB] FactPairs: 72
+[t=0.00198952s, 56128 KB] Bytes per state: 8
+[t=0.0020694s, 56128 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.00214627s, 56128 KB] New best heuristic value for cea: 8
+[t=0.00219187s, 56128 KB] g=0, 1 evaluated, 0 expanded
+[t=0.00223705s, 56128 KB] f = 8, 1 evaluated, 0 expanded
+[t=0.00228777s, 56128 KB] Initial heuristic value for cea: 8
+[t=0.00233235s, 56128 KB] pruning method: none
+[t=0.00239244s, 56128 KB] New best heuristic value for cea: 7
+[t=0.00243796s, 56128 KB] g=1, 2 evaluated, 1 expanded
+[t=0.00249402s, 56128 KB] New best heuristic value for cea: 6
+[t=0.00253894s, 56128 KB] g=2, 3 evaluated, 2 expanded
+[t=0.00260895s, 56128 KB] New best heuristic value for cea: 5
+[t=0.00265829s, 56128 KB] g=3, 4 evaluated, 3 expanded
+[t=0.00271334s, 56128 KB] New best heuristic value for cea: 4
+[t=0.00275898s, 56128 KB] g=4, 5 evaluated, 4 expanded
+[t=0.00281535s, 56128 KB] New best heuristic value for cea: 3
+[t=0.00285973s, 56128 KB] g=5, 6 evaluated, 5 expanded
+[t=0.00291557s, 56128 KB] New best heuristic value for cea: 2
+[t=0.00295853s, 56128 KB] g=6, 7 evaluated, 6 expanded
+[t=0.0030188s, 56128 KB] New best heuristic value for cea: 1
+[t=0.00306396s, 56128 KB] g=7, 9 evaluated, 7 expanded
+[t=0.00311388s, 56128 KB] New best heuristic value for cea: 0
+[t=0.00315922s, 56128 KB] g=8, 10 evaluated, 8 expanded
+[t=0.00321729s, 56128 KB] Solution found!
+[t=0.00326393s, 56128 KB] Actual search time: 0.000908233s
+move_seg_rw_0_400_seg_rww_0_50_south_south_medium airplane_cfbeg (1)
+move_seg_rww_0_50_seg_tww4_0_50_south_north_medium airplane_cfbeg (1)
+move_seg_tww4_0_50_seg_tww3_0_50_north_north_medium airplane_cfbeg (1)
+move_seg_tww3_0_50_seg_tww2_0_50_north_north_medium airplane_cfbeg (1)
+move_seg_tww2_0_50_seg_tww1_0_200_north_north_medium airplane_cfbeg (1)
+move_seg_tww1_0_200_seg_ppdoor_0_40_north_south_medium airplane_cfbeg (1)
+move_seg_ppdoor_0_40_seg_pp_0_60_south_south_medium airplane_cfbeg (1)
+park_seg_pp_0_60_south airplane_cfbeg (1)
+[t=0.00331277s, 56128 KB] Plan length: 8 step(s).
+[t=0.00331277s, 56128 KB] Plan cost: 8
+[t=0.00331277s, 56128 KB] Expanded 9 state(s).
+[t=0.00331277s, 56128 KB] Reopened 0 state(s).
+[t=0.00331277s, 56128 KB] Evaluated 10 state(s).
+[t=0.00331277s, 56128 KB] Evaluations: 10
+[t=0.00331277s, 56128 KB] Generated 9 state(s).
+[t=0.00331277s, 56128 KB] Dead ends: 0 state(s).
+[t=0.00331277s, 56128 KB] Expanded until last jump: 0 state(s).
+[t=0.00331277s, 56128 KB] Reopened until last jump: 0 state(s).
+[t=0.00331277s, 56128 KB] Evaluated until last jump: 1 state(s).
+[t=0.00331277s, 56128 KB] Generated until last jump: 0 state(s).
+[t=0.00331277s, 56128 KB] Number of registered states: 10
+[t=0.00331277s, 56128 KB] Int hash set load factor: 10/16 = 0.625
+[t=0.00331277s, 56128 KB] Int hash set resizes: 4
+[t=0.00331277s, 56128 KB] Search time: 0.0012439s
+[t=0.00331277s, 56128 KB] Total time: 0.00331277s
+Solution found.
+Peak memory: 56128 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+-----------PLAN-----------
+
+(move_seg_rw_0_400_seg_rww_0_50_south_south_medium airplane_cfbeg)
+(move_seg_rww_0_50_seg_tww4_0_50_south_north_medium airplane_cfbeg)
+(move_seg_tww4_0_50_seg_tww3_0_50_north_north_medium airplane_cfbeg)
+(move_seg_tww3_0_50_seg_tww2_0_50_north_north_medium airplane_cfbeg)
+(move_seg_tww2_0_50_seg_tww1_0_200_north_north_medium airplane_cfbeg)
+(move_seg_tww1_0_200_seg_ppdoor_0_40_north_south_medium airplane_cfbeg)
+(move_seg_ppdoor_0_40_seg_pp_0_60_south_south_medium airplane_cfbeg)
+(park_seg_pp_0_60_south airplane_cfbeg)
+; cost = 8 (unit cost)

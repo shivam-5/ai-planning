@@ -1,0 +1,183 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 1799.97s
+INFO     translator memory limit: 8192 MB
+INFO     translator command line string: /usr/bin/python3 /src/fd/builds/release/bin/translate/translate.py pddl-instances/ipc-2002/domains/depots-strips-automatic/domain.pddl pddl-instances/ipc-2002/domains/depots-strips-automatic/instances/instance-18.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.001s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.002s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 43 rules.
+Computing model... [0.070s CPU, 0.072s wall-clock]
+6652 relevant atoms
+3059 auxiliary atoms
+9711 final queue length
+24313 total queue pushes
+Completing instantiation... [0.220s CPU, 0.228s wall-clock]
+Instantiating: [0.300s CPU, 0.307s wall-clock]
+Computing fact groups...
+Finding invariants...
+16 initial candidates
+Finding invariants: [0.010s CPU, 0.007s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.010s CPU, 0.009s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.001s wall-clock]
+Choosing groups...
+47 uncovered facts
+Choosing groups: [0.010s CPU, 0.002s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.030s CPU, 0.024s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.013s wall-clock]
+Translating task: [0.310s CPU, 0.309s wall-clock]
+7680 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+66 propositions removed
+Detecting unreachable propositions: [0.170s CPU, 0.174s wall-clock]
+Reordering and filtering variables...
+65 of 65 variables necessary.
+46 of 65 mutex groups necessary.
+5568 of 5568 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.060s CPU, 0.056s wall-clock]
+Translator variables: 65
+Translator derived variables: 0
+Translator facts: 663
+Translator goal facts: 13
+Translator mutex groups: 46
+Translator total mutex groups size: 901
+Translator operators: 5568
+Translator axioms: 0
+Translator task size: 50506
+Translator peak memory: 70792 KB
+Writing output... [0.070s CPU, 0.064s wall-clock]
+Done! [0.950s CPU, 0.951s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: 1798.97s
+INFO     search memory limit: 8192 MB
+INFO     search command line string: /src/fd/builds/release/bin/downward --search 'astar(cea())' --internal-plan-file plan.txt < output.sas
+[t=2.4656e-05s, 55864 KB] reading input...
+[t=0.0222091s, 58632 KB] done reading input!
+[t=0.0229905s, 58896 KB] Initializing context-enhanced additive heuristic...
+[t=0.0602236s, 63852 KB] Building successor generator...done!
+[t=0.0622103s, 64292 KB] peak memory difference for successor generator creation: 440 KB
+[t=0.0622501s, 64292 KB] time for successor generation creation: 0.00170407s
+[t=0.0623201s, 64292 KB] Variables: 65
+[t=0.0623749s, 64292 KB] FactPairs: 663
+[t=0.0624227s, 64292 KB] Bytes per state: 24
+[t=0.0625715s, 64292 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.0642379s, 65868 KB] New best heuristic value for cea: 91
+[t=0.0642906s, 65868 KB] g=0, 1 evaluated, 0 expanded
+[t=0.0643344s, 65868 KB] f = 91, 1 evaluated, 0 expanded
+[t=0.0643826s, 65868 KB] Initial heuristic value for cea: 91
+[t=0.0644305s, 65868 KB] pruning method: none
+[t=0.0662354s, 65868 KB] New best heuristic value for cea: 89
+[t=0.0662855s, 65868 KB] g=1, 4 evaluated, 1 expanded
+[t=0.0760739s, 67332 KB] New best heuristic value for cea: 86
+[t=0.0761503s, 67332 KB] g=1, 19 evaluated, 1 expanded
+[t=0.0835592s, 67996 KB] New best heuristic value for cea: 84
+[t=0.0836352s, 67996 KB] g=2, 30 evaluated, 2 expanded
+[t=0.0959055s, 68664 KB] New best heuristic value for cea: 81
+[t=0.096039s, 68664 KB] g=2, 48 evaluated, 2 expanded
+[t=0.102077s, 68664 KB] New best heuristic value for cea: 79
+[t=0.102169s, 68664 KB] g=3, 57 evaluated, 3 expanded
+[t=0.117599s, 69196 KB] New best heuristic value for cea: 78
+[t=0.117702s, 69196 KB] g=3, 79 evaluated, 3 expanded
+[t=0.12089s, 69196 KB] New best heuristic value for cea: 76
+[t=0.120951s, 69196 KB] g=4, 84 evaluated, 4 expanded
+[t=0.142133s, 69856 KB] New best heuristic value for cea: 75
+[t=0.142237s, 69856 KB] g=5, 113 evaluated, 5 expanded
+[t=0.164384s, 69856 KB] New best heuristic value for cea: 74
+[t=0.164487s, 69856 KB] g=6, 145 evaluated, 6 expanded
+[t=0.168876s, 69856 KB] New best heuristic value for cea: 71
+[t=0.168952s, 69856 KB] g=6, 152 evaluated, 6 expanded
+[t=0.184955s, 69988 KB] New best heuristic value for cea: 70
+[t=0.185055s, 69988 KB] g=7, 175 evaluated, 7 expanded
+[t=0.206336s, 70384 KB] New best heuristic value for cea: 69
+[t=0.206432s, 70384 KB] g=8, 206 evaluated, 8 expanded
+[t=0.216619s, 70384 KB] New best heuristic value for cea: 68
+[t=0.21671s, 70384 KB] g=8, 221 evaluated, 8 expanded
+[t=0.226635s, 70384 KB] New best heuristic value for cea: 67
+[t=0.226722s, 70384 KB] g=9, 236 evaluated, 9 expanded
+[t=0.247635s, 70384 KB] New best heuristic value for cea: 66
+[t=0.247734s, 70384 KB] g=10, 267 evaluated, 10 expanded
+[t=0.264108s, 70516 KB] New best heuristic value for cea: 65
+[t=0.264211s, 70516 KB] g=11, 292 evaluated, 11 expanded
+[t=0.28248s, 70516 KB] New best heuristic value for cea: 64
+[t=0.282573s, 70516 KB] g=12, 321 evaluated, 12 expanded
+[t=0.308324s, 70912 KB] New best heuristic value for cea: 63
+[t=0.308422s, 70912 KB] g=13, 360 evaluated, 13 expanded
+[t=0.332322s, 71308 KB] New best heuristic value for cea: 62
+[t=0.332417s, 71308 KB] g=14, 395 evaluated, 14 expanded
+[t=0.354316s, 71704 KB] New best heuristic value for cea: 60
+[t=0.354404s, 71704 KB] g=15, 426 evaluated, 15 expanded
+[t=0.419724s, 72364 KB] New best heuristic value for cea: 59
+[t=0.419841s, 72364 KB] g=17, 515 evaluated, 18 expanded
+[t=0.427769s, 72364 KB] New best heuristic value for cea: 58
+[t=0.427869s, 72364 KB] g=18, 524 evaluated, 19 expanded
+[t=0.471791s, 72504 KB] New best heuristic value for cea: 56
+[t=0.47191s, 72504 KB] g=19, 582 evaluated, 20 expanded
+[t=0.4774s, 72640 KB] New best heuristic value for cea: 55
+[t=0.477489s, 72640 KB] g=20, 589 evaluated, 21 expanded
+[t=0.497368s, 72904 KB] New best heuristic value for cea: 54
+[t=0.497464s, 72904 KB] g=21, 616 evaluated, 22 expanded
+[t=0.498208s, 72904 KB] New best heuristic value for cea: 53
+[t=0.498255s, 72904 KB] g=21, 617 evaluated, 22 expanded
+[t=0.549214s, 73180 KB] New best heuristic value for cea: 52
+[t=0.549305s, 73180 KB] g=23, 681 evaluated, 24 expanded
+[t=0.572875s, 73312 KB] New best heuristic value for cea: 51
+[t=0.573003s, 73312 KB] g=24, 710 evaluated, 25 expanded
+[t=0.605599s, 73312 KB] New best heuristic value for cea: 50
+[t=0.605705s, 73312 KB] g=25, 750 evaluated, 26 expanded
+[t=0.906544s, 74236 KB] New best heuristic value for cea: 49
+[t=0.906638s, 74236 KB] g=24, 1139 evaluated, 40 expanded
+[t=0.92518s, 74236 KB] New best heuristic value for cea: 48
+[t=0.925277s, 74236 KB] g=25, 1164 evaluated, 41 expanded
+[t=0.934021s, 74236 KB] New best heuristic value for cea: 47
+[t=0.934105s, 74236 KB] g=25, 1177 evaluated, 41 expanded
+[t=0.988689s, 74764 KB] New best heuristic value for cea: 46
+[t=0.988788s, 74764 KB] g=27, 1246 evaluated, 44 expanded
+[t=1.0112s, 74764 KB] New best heuristic value for cea: 45
+[t=1.01129s, 74764 KB] g=28, 1275 evaluated, 45 expanded
+[t=1.04653s, 74764 KB] New best heuristic value for cea: 44
+[t=1.04663s, 74764 KB] g=29, 1318 evaluated, 46 expanded
+[t=1.77954s, 74900 KB] New best heuristic value for cea: 43
+[t=1.77964s, 74900 KB] g=30, 2262 evaluated, 82 expanded
+[t=1.8106s, 74900 KB] New best heuristic value for cea: 42
+[t=1.8107s, 74900 KB] g=31, 2302 evaluated, 83 expanded
+[t=2.07291s, 75848 KB] New best heuristic value for cea: 41
+[t=2.07302s, 75848 KB] g=32, 2631 evaluated, 96 expanded
+[t=2.09434s, 75848 KB] New best heuristic value for cea: 40
+[t=2.09444s, 75848 KB] g=33, 2658 evaluated, 97 expanded
+[t=2.12466s, 75848 KB] New best heuristic value for cea: 39
+[t=2.12477s, 75848 KB] g=34, 2695 evaluated, 98 expanded
+[t=28.6211s, 79552 KB] New best heuristic value for cea: 38
+[t=28.6212s, 79552 KB] g=37, 35052 evaluated, 1670 expanded, 1 reopened
+[t=133.44s, 88424 KB] New best heuristic value for cea: 37
+[t=133.44s, 88424 KB] g=39, 162042 evaluated, 8494 expanded, 1 reopened
+Peak memory: 219500 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+Remove intermediate file output.sas
+search exit code: 23
+
+Driver aborting after search
+-----------PLAN-----------
+
+cat: plan.txt: No such file or directory
